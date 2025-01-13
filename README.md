@@ -37,6 +37,7 @@ RSD export runs a batch file: "C:\MarbleCLAY\Plugin\PSX\RSDN.bat" there are 3 al
 **1) Native support**
 It uses a Net Yaroze member created executable, RSDLINK2.exe which converts RSD to TMD. It's works and has more features than the Sony supplied RSDLINK.
 English translation documentation is here: https://github.com/gwald/Net_Yaroze_related_binaries/blob/main/rsdlink2_eng.txt
+
 To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-RSDLINK2.bat"
 
 
@@ -44,11 +45,13 @@ To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-RSDLINK2.bat"
 This script usines the Sony supplied RSDLINK.
 But you have to have ntvdmx64 installed because RSDLINK is a 16bit DOS application.
 See: https://mendelson.org/ntvdmx64.html
+
 To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-ntvdmx64.bat"
 
 
 **3) DOSBOX support**
 If you don't want to install ntvdmx64 and still want to run the original RSDLINK tool, it can be run in a DOSBOX script, however it's about 20x times slower!!.
+
 To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-DOSBOX.BAT"
 
 
