@@ -1,0 +1,1199 @@
+;GARCIA The word template sometimes translates better to texture, "UV Template" would probably be better called UV Map. - テンプレートという言葉は、テクスチャと訳す方が適切な場合があります。「UV テンプレート」は、おそらく UV マップと呼ばれる方が適切でしょう。
+;save file as: MarbleCLAY\Resource\English.str
+;to apply changes, restart.
+
+Font {
+  Name "Tahoma"
+;  Name "Y.OzFontB"
+  Size 9
+  Bold 0
+}
+
+Form {
+  MainForm tbrObject "Object browser" "" 
+  MainForm btnObject "Object" "Show object window" 
+  MainForm tbrShading "Shading mode" "" 
+  MainForm imgPreview "" "Show option" 
+  MainForm tbrStatus "Status info" "" 
+  MainForm Panel1 "" "" 
+  MainForm pnlInfo "Message" "" 
+  MainForm tbrProp "Property window" "" 
+  MainForm btnProp "Property" "Show property" 
+  MainForm tbrPaint "Image control" "" 
+  MainForm imgImage "" "Show image option" 
+  MainForm tbrSelect "Select Tools" "" 
+  MainForm imgSel "" "Show selection tool" 
+  MainForm tbrQuick "Quick Tools" "" 
+  MainForm tbrTools "Modal Tools" "" 
+  MainForm imgTool "" "Show tool option" 
+  MainForm tbrViewPort "View Tools" "" 
+  MainForm imgCam "" "Show viewpoint option" 
+  MainForm tbrUndo "Select Tools" "" 
+  MainForm tbrSelFilter "Shading mode" "" 
+  MainForm actPreview1 "&Wire frame" "Wireframe" 
+  MainForm actPreview2 "Wire frame&2" "Wireframe2" 
+  MainForm actPreview3 "Shading(surface and edge) " "Shading" 
+  MainForm actPreview4 "Shading2(&face)" "Shading2" 
+  MainForm actPreview5 "&Textured" "Textured" 
+  MainForm actPreview6 "Hightlight selected" "Hightlight selected" 
+  MainForm actPreview7 "Overwrite selected edge" "Overwrite selected edge" 
+  MainForm actPreviewSmooth "&Smooth shading" "Smooth shading" 
+  MainForm actPreviewAdvancedShader "&Vertex/Pixel shader" "Vertex/Pixel shader" 
+  MainForm actOpenGL "&OpenGL preview" "OpenGL preview" 
+  MainForm actToolObject "&Object" "" 
+  MainForm actToolShading "&Preview" "" 
+  MainForm actToolStatus "&Status" "" 
+  MainForm actToolProp "P&roperty" "" 
+  MainForm actToolFigure "D&rawing view" "" 
+  MainForm actToolSpline "Subpatch toggle"
+  MainForm actToolMirror "Mirror"
+  MainForm actToolQuickR "QuickTool(R)"
+  MainForm actToolBone "Bone"
+  
+  MainForm actClockwise "&Clockwise" "" 
+  MainForm actAntiClockwise "&Anti-clockwise" "" 
+  MainForm actNoneRev "&Unchecked the front and back surface" "" 
+  MainForm actAllocDummy "&Assignment of dummy coordinates" "" 
+  MainForm actImgOpen "Load &Image" "Load Image" 
+; GARCIA tip: Select UV first - ヒント: 最初に UV を選択します
+  MainForm actImgCopy "&Send image to clipboard" "Select UV first, Send image to clipboard" 
+  MainForm actImgSoft "Start up &paint tool" "Select UV first, Start up paint tool" 
+  MainForm actImgPaste "&Get image from clipboard" "Select UV first, Get image from clipboard" 
+
+  MainForm actBooleanCut "Boolean Cut..." ""
+  MainForm actEdgeSeparate "Separate By Edges" ""
+  MainForm actEdgeBevel "Bevel Edge" ""
+  MainForm actEdgeDiagonalFlip "Diagonals Flip" ""
+; GARCIA Better english translations for Mesh UV and creating UV map - メッシュ UV と UV マップの作成の英訳の改善
+  MainForm actUVMapMake "Selected Mesh Unwrap / UV mapping..." "" 
+  MainForm actImgUV "Bake UV texture map" "" 
+; GARCIA these are commonly known has Image Planes or sometimes background template - これらはイメージ プレーンまたは場合によっては背景テンプレートを持っていることが一般的に知られています
+  MainForm actModelingTemplate "Image planes / UV Texture" "" 
+  MainForm actImgXY "Load to XY plane..." "" 
+  MainForm actImgYZ "Load to YZ plane..." "" 
+  MainForm actImgXZ "Load to XZ plane..." "" 
+ ; GARCIA Dont use; add image via Material, Send to - 使用しないでください。 素材経由で画像を追加、送信先
+  MainForm actImgUVLoad "Load to UV Texture..." "Dont use, add image via Material -> Send to" 
+  MainForm actSelPoint "Select" "" 
+  MainForm actSelRect "Rect" "" 
+  MainForm actSelRel "Magnet" "" 
+  MainForm actSelFreeHand "Lasso" "" 
+  MainForm actSelPaint "Paint" "" 
+  MainForm actToolPaint "Image" "" 
+  MainForm actToolQuick "Quick tool" "" 
+  MainForm actToolSelect "Select tool" "" 
+  MainForm actToolTools "Edit tool" "" 
+  MainForm actToolViewPort "viewpoint" "" 
+  MainForm actUndo "&Undo" "" 
+  MainForm actRedo "&Redo" "" 
+  MainForm actToolUndo "&Undo" "" 
+  MainForm actXYtop "Top" "" 
+  MainForm actXYbottom "Bottom" "" 
+  MainForm actXZleft "Left" "" 
+  MainForm axtXZright "Right" "" 
+  MainForm actYZface "Front" "" 
+  MainForm actYZback "Back" "" 
+  MainForm actLoope "Show loupe" "" 
+  MainForm act3FigPers "Change view to perspective" "" 
+  MainForm act3FigXY "Change view to XY plane" "" 
+  MainForm act3FigYZ "Change view to YZ plane" "" 
+  MainForm act3FigXZ "Change view to XZ plane" "" 
+  MainForm act3FigLarge "Change view between fix and partition" "" 
+  MainForm actFigChangeToUVD "Change XYZ view to UVD view" "" 
+  MainForm actViewNames "Show Named Faces" "" 
+  MainForm actMenuFile "&File" "" 
+  MainForm actMenuEdit "&Edit" "" 
+  MainForm actMenuModeling "&Modeling" "" 
+  MainForm actMenuImage "&Image" "" 
+  MainForm actMenuView "&View" "" 
+  MainForm actMenuOption "&Option" "" 
+  MainForm actMenuWindow "&Window" "" 
+  MainForm actMenuHelp "&Help" "" 
+  MainForm actDelete "Delete" "" 
+  MainForm actBreak "Mode cancel" "" 
+  MainForm actSplineMesh "Subpatch Mesh 1 (curved)" "" 
+  MainForm actSplinePatch "Subpatch Mesh 2 (straight)" "" 
+  MainForm actMeshGuage "Subpatch Mesh:Show control points" "Show Subpatch control points" 
+  MainForm actMeshPreview "Subpatch Mesh:Show curved surface" "Show Subpatch curved surface" 
+  MainForm actFilterPoint "Filter:Vertex" "" 
+  MainForm actFilterEdge "Filter:Edge" "" 
+  MainForm actFilterPoly "Filter:face" "" 
+  MainForm actFilterRevPoly "Filter:Back face" "" 
+  MainForm actFilterRel "Filter:Connected element" "" 
+  MainForm actPolyFlip "Reverse selected surface direction" "" 
+  MainForm actPolyAdjust "Make all surfaces face the same direction" "" 
+  MainForm actTest "Test" "" 
+  MainForm actSelMenuNone "Cancel" "" 
+  MainForm actSelMenuFront "Filter" "" 
+  MainForm actSelMenuAll "All" "" 
+  MainForm actSelMenuAdd "Add" "" 
+  MainForm actSelMenuSub "Remove" "" 
+  MainForm actPolyPushByFig "Extrude" "" 
+  MainForm actFreezSpline "Freeze (bake a clone) Subpatch mesh to Polygon" "" 
+  MainForm actDuplicate "Duplicate..." "" 
+  MainForm actArrayDuplicate "ArrayDuplicate..." "" 
+  MainForm actGridOnOff "Snap to Grid" "" 
+  MainForm actGridSet "Grid option..." "" 
+  MainForm actFileSave "&Save..." "" 
+  MainForm actFileSaveAs "Save &As..." "" 
+  MainForm actFileSaveAll "Save All..." "" 
+  MainForm actFileClose "Close document" "" 
+  MainForm actFileReload "Reload document" "" 
+  MainForm actFileBack "Go back"
+  MainForm actFileForward "Go forward"
+
+  MainForm actFileOpen "&Open..." "" 
+  MainForm actPolyUnHide "Show hidden parts" "" 
+  MainForm actPolyUnSelectHide "Hide unselected parts" "" 
+  MainForm actPolyHide "Hide selected parts" "" 
+  MainForm actNaming "Add selected to Named Faces" "" 
+  MainForm actPolyNaming "New Named Faces" "" 
+  MainForm actSplineDettach "Release Subpatch Mesh" "" 
+  MainForm actCursorChange "Move WorkPlane to mouse pointer" "" 
+  MainForm actRefPlaneReset "Reset Reference plane (Fit to drawing lane)" "" 
+  MainForm actDeleteEx "Special-delete" "" 
+  MainForm actWeld "Weld..." "" 
+  MainForm actMoveToWorkPlane "Move selected vertices to current WorkPlane" "" 
+  MainForm actColorPanel "Current color" "" 
+  MainForm actObjectSelect "Select connected elements" "" 
+  MainForm actToolSelFilter "Select filter" "" 
+  ;MainForm actPolyChangeColor "Change selected polygons color" "" 
+; GARCIA 「選択したポリゴンに選択したマテリアルを割り当て」
+  MainForm actPolyChangeColor "Assign current material to selection" "Assign current material to selection" 
+  
+  MainForm actPolyFlat "Flatten polygon" "" 
+  MainForm actRefresh "Refresh window" "" 
+  MainForm actPolyCruster "Make Polygon list to suitable" "" 
+  MainForm actPolyActive "Keep select state" "" 
+  MainForm actEdgeSharp "Sharpen edge" "" 
+  MainForm actEdgeSmooth "Smooth edge" "" 
+  MainForm actVertexSharp "Sharpen vertex(Maximize weight)" "" 
+  MainForm actVertexSmooth "Smooth vertex(Reset weight)" "" 
+  MainForm actPolySubdivide "Subdivide" "" 
+  MainForm actAllMirror "SimpleMirror" "" 
+  MainForm actMirror "Make symmetric shape of selected parts" "" 
+  MainForm actEffectRelax "Smooth/Relax filter1" "" 
+  MainForm actEffectRelax2 "Smooth/Relax filter2" "" 
+  MainForm actEffectBumpy "Bumpy filter" "" 
+  MainForm actUnMirror "Release symmetry" "" 
+  MainForm actMenuMirrorCurve "Mirror/&Curve" "" 
+  MainForm actFreezMirror "Fix symmetric parts" "" 
+  MainForm actSelFrontMenu "Select front surface" "" 
+  MainForm actMirrorCenterPoint "Constrain selected coordinates on the symmetric plane" "" 
+  MainForm actCopy "Copy" "" 
+  MainForm actPaste "Paste" "" 
+  MainForm actCut "Cut" "" 
+  MainForm actDrawLockedVertex "Show locked vertex" "" 
+  MainForm actRectSelectFront "(Select) select front surface" "" 
+  MainForm actRectSelectAll "(Select) select all surfaces" "" 
+  MainForm actRectSelectOpenMenu "(Select) show select window" "" 
+  MainForm actOptionObj "Show object window" "" 
+  MainForm actOptionProp "Show property window" "" 
+  MainForm actOptionMaterial "Material window" "" 
+  MainForm actOptionPreview "Show preview option" "" 
+  MainForm actOptionView "Show view option" "" 
+  MainForm actOptionTool "Show tool option" "" 
+  MainForm actOptionSelect "Show select option" ""
+  MainForm actOptionScript "Message/Script window..." "" 
+  MainForm actFloatingTray "Show floating tray..." "" 
+  
+  MainForm actRightTrayOpen "Open right tray"
+  MainForm actLeftTrayOpen "Open left tray"
+  MainForm actImport "&Import..." "" 
+  MainForm actViewUndo "Undo View" "" 
+  MainForm actViewRedo "Redo View" "" 
+  MainForm actViewCenter "Set center here" "" 
+  MainForm actViewManipulator "Show Manipulator"
+  MainForm actViewLocalManipulator "Show Local-manipulator"
+  MainForm actViewReferplane "Toggle visible workplane"
+  MainForm actSelectUnMirror "Release symmetric shape of selected elements" "" 
+  MainForm actSelectFreezMirror "Weak fix symmetric shape of selected elements" "" 
+  MainForm actSelectAll "Select all" "" 
+  MainForm actUnSelect "Un Select" "" 
+  MainForm actSelectToTemp "Select to Temporary" ""
+  MainForm actTempToSelect "Temporary to Select" ""
+  MainForm actMarking "Select Flowline arrowhead" ""
+  MainForm actSelectDopelEdge "Select overlap edges" "" 
+  MainForm actSelectSingleEdge "Select single edges" "" 
+  MainForm actSelect2TrigonEdge "Select common edge between two triangles" "" 
+  ;GARCIA missing
+  MainForm actSelectTerminalEdge "Select terminating edge" "" 
+  
+  MainForm actSelectPopup "Select"
+  MainForm actSelectObjectConnection "Select connected elements"
+  MainForm actSelectEdgeRing "Select connected edges"
+  MainForm actSelectPolyRing "Select connected faces "
+  
+
+  
+  MainForm actImgHalftone "Light color" "" 
+  MainForm actImgSizeAndPos "Change texture's size and positon..." "" 
+  MainForm actVertexColision "Sense vertex Collision-Transform" "" 
+  MainForm actVertexColisionMove "Sense vertex Collision-Move" "" 
+  MainForm actVertexColisionMoveOffset "Sense vertex(Offset) Collision-Move" "" 
+  MainForm actVertexColisionOffset "Sense vertex(Offset) Collision-Transform" "" 
+  MainForm actDockInit "Initialize window docked state" "" 
+  MainForm actExport "&Export..." "" 
+  MainForm actPrimSphere "Sphere..." "" 
+  MainForm actPrimSquare "Cube..." "" 
+  MainForm actPrimCylinder "Cylinder..." "" 
+  MainForm actPrimCorn "Cone..." "" 
+  MainForm actPrimDonut "Torus..." "" 
+  MainForm actPrimPlane "Plane..." "" 
+  MainForm actTestRender "Test rendering(POV)..." "" 
+  MainForm actTestRenderRRT "Test rendering(RRT2)..." "" 
+  MainForm actExit "e&Xit" "" 
+  MainForm actNew "&New" "" 
+  MainForm actWindowTile "Tile window (vertical)" "" 
+  MainForm actWindowTile2 "Tile window (horizontal)" "" 
+  MainForm actWindowMax "Largest" "" 
+  MainForm actHelpContents "Contents..." "" 
+  MainForm actHelpTurtorial "Tutorial..." "" 
+  MainForm actHelpInstall "Install..." "" 
+  MainForm actHelpUnInstall "Uninstall..." "" 
+  MainForm actHelpRegist "User registration..." "" 
+  MainForm actHelpAbout "About MarbleCLAY..." "" 
+  MainForm actAboutPlugin "About Plugins..." "" 
+  MainForm actEditMove "Move" "Move tool" 
+  MainForm actEditPencil "Pencil" "Pencil" 
+  MainForm actEditPolygn "face/UV weld" "Make face/UV weld" 
+  MainForm actEditAddPoint "Add vertex" "" 
+  MainForm actEditPolyline "Polyline" "Polyline" 
+  MainForm actEditKnife "Cut" "Cut tool" 
+  MainForm actEditPush "Extrude" "Extrude" 
+  MainForm actExtrudePara "Extrude Parallel" "Extrude Parallel" 
+  MainForm actExtrudeKeepRev "Extrude Keep backside" "Extrude" 
+  MainForm actExtrudeBevel "Extrude with Bevel" "Extrude with Bevel" 
+  MainForm actExtrudeMove "Extrude Move" "Extrude Move" 
+  MainForm actExtrudeSnap "Extrude Snap" "Extrude Snap" 
+  MainForm actExtrudeEdgeBevel "Bevel Edge" "Bevel Edge" 
+  MainForm actEditRoll2D "2D Rotate" "2D Rotate" 
+  MainForm actViewZoomRect "Expand area box" "Expand area box" 
+  MainForm actViewhand "Change display area" "Change display area" 
+  MainForm actViewZoom "Zoom view" "Zoom in,out" 
+  MainForm actViewMove "Change view" "Move camera" 
+  MainForm actLightMove "Change light position" "Move light" 
+ 
+  MainForm actEditScale "Scale " "Scale tool" 
+  MainForm actEditFree "Freehand polyline" "Freehand polyline" 
+  MainForm actEditSplit "Divide " "Divide face or edge" 
+  MainForm actEditClay "Clay tool" "Clay tool" 
+  MainForm actZoomIn "Zoom in " "" 
+  MainForm actZoomOut "Zoom out" "" 
+  MainForm actLeftALT "actLeftALT" "" 
+  MainForm actLeftALTSHIFT "actLeftALTSHIFT" "" 
+  MainForm actLeftALTCTRL "actLeftALTCTRL" "" 
+  MainForm actLeftCTRLSHIFT "actLeftCTRLSHIFT" "" 
+  MainForm actLeftSPACE "actLeftSPACE" "" 
+  MainForm actRightDragAuto "Auto"
+  MainForm actWorkXY "Set XY plane as WorkPlane" "Set XY WorkPlane" 
+  MainForm actWorkYZ "Set YZ plane as WorkPlane" "Set YZ WorkPlane" 
+  MainForm actWorkXZ "Set XZ plane as WorkPlane" "Set XZ WorkPlane" 
+  MainForm actWorkScreen "Set screen as WorkPlane" "Set WorkPlane parallel to view" 
+  MainForm actWorkAuto "Set XY,YZ or XZ WorkPlane automaticaly" "Set automaticaly XY,YZ or XZ WorkPlane" 
+  MainForm actWorkGyakkou "Set WorkPlane to perspective depth (GYAKKOU algorithm)" "Set GYAKKOU Perspective Depth" 
+  MainForm actWorkPoly "Set WorkPlane to selected polygons" "Set WorkPlane parallel with selected polygons" 
+  MainForm actWorkView "actWorkView" "" 
+  MainForm actWorkEdit "actWorkEdit" "" 
+  MainForm actXZFlip "Display from Reverse(XZ)" "" 
+  MainForm actYZFlip "Display from Reverse(YZ)" "" 
+  MainForm actXYFlip "Display from Reverse(XY)" "" 
+  MainForm actXY_pers "XY View <-> Perspective View" "" 
+  MainForm actYZ_pers "YZ View <-> Perspective View" "" 
+  MainForm actXZ_pers "XZ View <-> Perspective View" "" 
+  MainForm actTool "Tool" "" 
+  MainForm actSelTool "Select tool" "" 
+  MainForm actWorkplane "WorkPlane" "" 
+  MainForm actPrimitive "Make primitive object" "" 
+  MainForm actEffect "Effects" "" 
+  MainForm actCollision "Collision" "" 
+  MainForm actDivide "Divide" "" 
+  MainForm actPlugin "Plugin" ""
+
+  MainForm actSmartGuidelineSubMenu "SmartGuideline" ""
+  MainForm actSmartGuideMirror "SmartGuideline(cross section) : Mirror copy" ""
+  
+  MainForm actPreviewMode "Preview style" "" 
+  MainForm actReverse "Check front and back of faces" "" 
+  MainForm actChangeSurf "Change drawing" "" 
+  MainForm actViewPosition "Change viewport" "" 
+  MainForm actWorkSpaceChange "Change workspace" "" 
+  MainForm actDockingSite "Add docking site" "" 
+  MainForm actEnglish "Default Language" "" 
+  MainForm actWindowWindow "Show window" "" 
+  MainForm actWindowToolbars "Show toolbar" "" 
+  MainForm actToolBarUnDock "Release docking" "" 
+  MainForm actDockTop "Top"
+  MainForm actDockBottom "Bottom"
+  MainForm actDockLeft "Left"
+  MainForm actDockRight "Right"
+  MainForm actSmallToolIcon "Switch icon size"
+  MainForm actToolbarClose "Close" "" 
+  MainForm actPreference "Configuration..."
+  MainForm actPrefWizard "Wizard - Configure of GUI Operation ..."
+
+  MainForm actFinGenerate "Generate Fin"
+
+  MainForm actGroup "Group"
+  MainForm actGroupUnGroup "Ungroup"
+  MainForm actGroupFusion "Fusion into Named Faces"
+  MainForm actGroupInvisible "Show/Hide Group"
+  MainForm actGroupRename "Rename Group"
+  
+  MainForm actImportParts "Import .mcl file as 'Parts'"
+  MainForm actFreezeParts "Freeze (bake a clone) 'Parts'/'Deform'"
+
+  MainForm actFreezeSelectedParts "Freeze (bake a clone) 'Parts'/'Deform'"
+  MainForm actEnterParts "Edit 'Parts'"
+  MainForm actEditExtAttribute "Edit obj attribute..."
+  MainForm actEditMatAttribute "Edit material attribute..."
+  MainForm actDeleteMaterial "Delete material"
+  
+  MainForm actMatDuplicate "Duplicate material"
+  MainForm actMatCopy "Copy material"
+  MainForm actMatPaste "Paste material"
+
+  MainForm actPartsToWorkPlane "Move Parts/Bone to Workplane"
+  MainForm actParsMirror "Make mirror Parts/Bone"
+  MainForm actAttachBoneSimple "Attach and Activate bone (Simple)"
+  MainForm actDetachBoneSimple "Detach and Deactivate bone (Simple)"
+  MainForm actSkinmode "Activate bone"
+  MainForm actDeactivateSkinMode "Deactivate bone"
+  MainForm actAttachBone  "Attach vertices to bone "
+  MainForm actDetachBone  "Detach vertives from bone"
+  MainForm actPartsResetPosition  "Reset Parts/Bone positon"
+  
+  frmToolOptionTemplate tabMove "Move" "" 
+  frmToolOptionTemplate GroupBox1 " Smooth bend" "" 
+  frmToolOptionTemplate cbxSmoothBend "Auto" "" 
+  frmToolOptionTemplate cbxSmoothBendAndScaling "Scale" "" 
+  frmToolOptionTemplate tabPencil "Pencil" "" 
+  frmToolOptionTemplate ToolBar1 "ToolBar1" "" 
+
+  frmToolOptionTemplate tabFace "Make face" "" 
+  frmToolOptionTemplate rgpFaceMode "Make face automatically" "" "Full auto |By user |"
+  MainForm actFacetTriangle "Fill face in triangle" "" 
+  MainForm actFacetSquare "Fill face in rectangle" "" 
+  MainForm actFacetDragAndWeld "Drag and weld" "" 
+  MainForm actFacetPointOnEdge "Add vertex on edge" "" 
+  MainForm actFacetAutoSplit "Divide face automatically" "" 
+  MainForm actFacetDragCont "Keep on drawing line with D&W" "" 
+  MainForm actFacetLineCont "Keep on drawing line" "" 
+  MainForm actFacetSnapOnFace "Snap on face" "" 
+
+  frmToolWin tabPolyline "Polyline" "" 
+  MainForm actLinePointOnEdge "Add vertex on edge" "" 
+  MainForm actLineAutoSplit "Divide face automatically" "" 
+  MainForm actLineDragAndWeld "Drag and weld" "" 
+  MainForm actLineDragCont "Keep on drawing line with D&W" "" 
+
+  MainForm actScaleRotReset "Reset center" "" 
+  MainForm actObjwinHighlight "Highlight object"
+  MainForm actObjwinShowLabel "Show label at object"
+  
+  frmToolOptionTemplate tabAddPoint "Add vertex" "" 
+  frmToolOptionTemplate cbxAutoSplit3 "Divide face automatically" "" 
+  frmToolOptionTemplate rgpDelPoint "Delete vertex" "" "Right Click |Ctrl+Left Click |Toggle |"
+  frmToolOptionTemplate cbxAddSegment "Add segment" "" 
+  frmToolOptionTemplate tabClay "Clay tool" "" 
+  frmToolOptionTemplate Label1 "Force" "" 
+  frmToolOptionTemplate GroupBox2 " Smooth bend" "" 
+  frmToolOptionTemplate cbxSmoothBend2 "Auto" "" 
+  frmToolOptionTemplate cbxSmoothBendAndScaling2 "Scale" "" 
+  frmToolOptionTemplate tabPush "Extrude" "" 
+  frmToolOptionTemplate rgpPushType "Style" "" "Parallel |Keep backside|Bevel |Moving |Snap|BevelEdge"
+  frmToolOptionTemplate cbxEdgeVertexExtrude "Extrude Edge,Vertex" ""
+  frmToolOptionTemplate tabRoll "2D Rotate" "" 
+  frmToolOptionTemplate tabScale "Scale" "" 
+  frmToolOptionTemplate tabCut "Cut tool" "" 
+  frmToolOptionTemplate Label5 "No option..." "" 
+  frmToolOptionTemplate tabFreeHand "Freehand Polyline" "" 
+  frmToolOptionTemplate Label2 "No option..." "" 
+  
+  frmSelectTool tabPaint "Paint" "" 
+  frmSelectTool Label2 "Strength" "" 
+  
+  frmSelectTool tabRelation "Magnet" "" 
+  frmSelectTool Label1 "Range" "" 
+  frmSelectTool gbxMagnet "Shape" "" 
+  frmSelectTool Label3 "Round" "" 
+  frmSelectTool Label4 "%" "" 
+  frmSelectTool cbxFix "Modify" "" 
+  frmSelectTool cbxNoConnect "Select unlink point" "" 
+  frmSelectTool cbxConnectCount "Select with count" "" 
+  frmSelectTool tabPointSel "Normal" "" 
+  frmSelectTool rgpRectSelectModeNormal "After drag" "" "Select range:Menu |Range:All (Ignore filter) |Range:Filter |None |Lasso:Menu|Lasso:All (Ignore filter)|Lasso:Filter"
+  frmSelectTool tabFreeHand "Lasso" "" 
+  frmSelectTool Label5 "No option..." "" 
+  frmSelectTool tabRect "Rect" "" 
+  frmSelectTool rgpRectSelectMode "Select mode" "" "Menu |All (Ignore filter)|Filter |"
+  frmSelectTool cbxCanDragMove "Can drag to move" "" 
+  frmSelectTool rgpLassoSelectMode "Select mode" "" "Menu |All (Ignore filter)|Filter |"
+  
+  frmPrefControl1 Label25 "Handle perspective view" "" 
+  frmPrefControl1 rgpView "View control" "" "Move view reverse direction of drag |Move view same direction of drag |"
+  frmPrefControl1 Label22 "Handle 3 way view" "" 
+  frmPrefControl1 rgpZoom "Zoom In/Out" "" "Zoon in with upper drag |Zoon in with lower drag |"
+
+  frmPrefShortcut btnShortCutSave "Save as..." ""
+  frmPrefShortcut btnShortCutOpen "Load..." ""
+  frmPrefShortcut btnShortCutDefault "Return to default" ""
+  frmPrefShortcut lblConflictShortCut "There is a key conflicted ."
+  frmPrefGrid Label38 "Grid interval" "" 
+  frmPrefGrid Label39 "End of Grid" "" 
+
+  frmEnviron tcrEnviron "tab" "" "Display color|Texture|OpenGL|SoftGL|Show1|Show2|Control1|Control2|Shortcut|DefaultGrid|Save|Wheel|Copy&Paste|SmartScroll|TestRendering|CursorKey|Other"
+  frmEnviron tabColor "Display color" "" 
+  frmEnviron tabNudge "Nudge" "" 
+  frmEnviron tabTemplate "Texture" "" 
+  frmEnviron tabOther "Misc" "" 
+  frmEnviron tabPreview "Perspective view" "" 
+  frmEnviron TabSheet1 "3 way view" "" 
+  frmEnviron cbx3surfNotViewMirror "Don't show symmetric shape" "" 
+  frmEnviron cbx3surfNotViewSpline "Don't show curved surface(OpenGL)" "" 
+  frmEnviron edtDefaultGrid "1" "" 
+  frmEnviron edtDefaultLargeGrid "5" "" 
+  frmEnviron cbxGridSnap "Snap to grid" "" 
+  frmEnviron tabSave "Save" "" 
+  frmEnviron tabWheel "Wheel(mid-button)" "" 
+  frmEnviron tabCopyAndPaste "Copy&&Paste" "" 
+  frmEnviron tabIcon "Customize icon" "" 
+  frmEnviron tabTestRender "Test render" "" 
+  frmEnviron Button2 "OK" "" 
+  frmEnviron Button3 "CANCEL" "" 
+  frmEnviron cbxHalfFrameNoShade "Vertical resolution 1/2" "" 
+  frmEnviron cbxHalfXFrameNoShade "Horizontal resolution1/2" "" 
+  frmEnviron cbxHalfFrame "Vertical resolution 1/2" "" 
+  frmEnviron cbxHalfXFrame "Horizontal resolution1/2" "" 
+  frmEnviron cbxHalfFlatFrame "Vertical resolution 1/2" "" 
+  frmEnviron cbxHalfXFlatFrame "Horizontal resolution1/2" "" 
+  frmEnviron cbxHalfFlat "Vertical resolution 1/2" "" 
+  frmEnviron cbxHalfXFlat "Horizontal resolution1/2" "" 
+  frmEnviron cbxDarkUnSelected "Darken" "" 
+  frmEnviron cbxTranslateUnSelected "Transparent" "" 
+  frmEnviron cbxPolyViewVertex "Always show vertex" "" 
+  frmEnviron cbxPolyRollOver "Rollover vertex" "" 
+  frmEnviron cbxSplineViewVertex "Always show vertex" "" 
+  frmEnviron cbxSplineRollOver "Rollover vertex" "" 
+  frmEnviron cbxTexShade "Shading in textured preview" "" 
+  frmEnviron cbxNewWindow "Open new document with largest window" "" 
+  frmEnviron cbxAutoMenu "Automatically open tool window" "" 
+  frmEnviron cbxMonitorRes "Always check system resource" "" 
+  frmEnviron cbxPersQuickArea "Use control area in side" "" 
+  frmEnviron cbxSurfQuickArea "Use control area in side" "" 
+  frmEnviron cbxAutoSave "Automatic save" "" 
+  frmEnviron cbxGeneration "Generation" "" 
+  frmEnviron cbxSavePreview "Save preview" "" 
+  frmEnviron cbxSyncZoom "Synchronize zoom in 3 way view" "" 
+  frmEnviron cbxSyncPersCenter "Synchronize center of view" "" 
+  frmEnviron cbxAutoSurfChange "Automatically change selected view" "" 
+  frmEnviron cbxSyncCenterByObjwin "Synchronize all views when changing center of object window" "" 
+  frmEnviron cbxSwitchOpenGLEachView "Change OpenGL/SoftGL in each view"
+  frmEnviron cbxOpenGLOverwriteActiveWire "Display overwrite selected edge"
+  frmEnviron cbxActiveUpdateOpenGL "Active update of OpenGL view"
+  frmEnviron cbxMakeSubMesh "Add face making detached surface or edge" ""
+
+  frmEnviron cbxTestRender "Test render with MegaPov/POV-Ray" "" 
+  frmEnviron cbxTestRenderRRT "Test render with Redqueen2" "" 
+  frmEnviron cbxSelectRevPolyOn3UVview "Reversed-face is always selectable on UVD(3Way)"
+
+  frmPrefColor Label3 "X axis" "" 
+  frmPrefColor Label4 "Y axis" "" 
+  frmPrefColor Label5 "Z axis" "" 
+  frmPrefColor ESVLabel2 "Rollover manipulator" "" 
+  frmPrefColor Label29 "XY plane color" "" 
+  frmPrefColor Label30 "XZ plane color" "" 
+  frmPrefColor Label31 "YZ plane color" "" 
+  frmPrefColor Label7 "Selected color" "" 
+  frmPrefColor Label23 "Rollover" "" 
+  frmPrefColor Label24 "Uneditable mesh" "" 
+  frmPrefColor GroupBox1 "Preview window color option" "" 
+  frmPrefColor Label2 "Background color" "" 
+  frmPrefColor Label6 "Mesh color" "" 
+  frmPrefColor GroupBox2 "UV window color option" "" 
+  frmPrefColor Label19 "UV mesh color" "" 
+  frmPrefColor Label20 "Texture background" "" 
+  frmPrefColor GroupBox3 "3 way view" "" 
+  frmPrefColor Label18 "Background color" "" 
+  frmPrefColor Label21 "Editable mesh" "" 
+  frmPrefColor Label8 "Default material color" "" 
+  frmPrefColor ESVLabel1 "Temporary selected" "" 
+  
+
+  frmPrefCOntrol2 Label10 "Clickable area" "" 
+  frmPrefCOntrol2 Label11 "pixels" "" 
+
+  frmPrefCOntrol2 Label1 "Vertex selectable range" "" 
+  frmPrefCOntrol2 Label2 "pixels" "" 
+  frmPrefCOntrol2 Label3 "Edge selectable range" "" 
+
+  frmPrefTemplate Label1 "Paint tool" "ie: mspaint" 
+  frmPrefTemplate Label16 "Initial size" "" 
+  frmPrefTemplate Label17 "X" "" 
+  frmPrefTemplate Button1 "Browse..." "" 
+  frmPrefTemplate rgpDataExchange "Data exchange for paint tool" "" "Clipboard(Default) |File(when export to other machine) |"
+  frmPrefTemplate gbxFileExchange "File config" "" 
+  frmPrefTemplate StaticText1 "File name" "" 
+  frmPrefTemplate Button4 "Browse..." "" 
+  frmPrefTemplate StaticText2 "Interval of check" "" 
+  frmPrefTemplate StaticText3 "every 1 ms" "" 
+  
+  frmPrefOther Label50 "Time to open window" "" 
+  frmPrefOther Label12 "UNDO count" "" 
+  frmPrefOther Label51 "msec" "" 
+  frmPrefOther rgpFileOpen "File dialog" "" "Keep last folder |Always open this folder |"
+
+  frmPrefPreview Label14 "Show one by one(Use for debug.Don't select this normally)" "" 
+  frmPrefPreview ESVTabControl1 "" "" "Wire1|Wire2|Shading1|Shading2"
+  frmPrefPreview rgpFrameNoShade "Color" "" "Show one by one |256 color|65536 color |32000 color |"
+  frmPrefPreview rgpFrame "Color" "" "Show one by one |256 color|65536 color |32000 color |"
+  frmPrefPreview rgpFlatFrame "Color" "" "Show one by one |256 color|65536 color |32000 color |"
+  frmPrefPreview TabSheet10 "ZBuffer" "" 
+  frmPrefPreview rgpFlat "Color" "" "Show one by one |256 color|65536 color |32000 color |"
+  frmPrefPreview cbxFlatZsort "Z sort" "" 
+  frmPrefPreview GroupBox6 "Unselected object or mesh" "" 
+
+  frmPrefPreviewOther Label13 "Mesh line" "" 
+  frmPrefPreviewOther Label36 "Not fixed " "" 
+  frmPrefPreviewOther Label35 "Single edge" "" 
+  frmPrefPreviewOther Label34 "Control net(Wire)" "" 
+  frmPrefPreviewOther Label38 "Control net(Shade)" "" 
+  frmPrefPreviewOther Label37 "Spilne edge" ""
+  frmPrefPreviewOther GroupBox1 "Show wire" "" 
+  frmPrefPreviewOther GroupBox5 "Show curved surface" "" 
+  frmPrefPreviewOther Label8 "Divide number in wire preview" "" 
+  frmPrefPreviewOther Label9 "Divide number in shading preview" "" 
+  frmPrefPreviewOther Label1 "Vertex size" "" 
+
+  frmPrefWheel Label43 "Press Mid-button while pressing Right-button$ switch way of change view.$$Turn wheel while pressing <CTRL|Right-button>$switch zoom and command." "" 
+  frmPrefWheel rgpMiddleButton "Mid-button" "" "Perspective view:Change view   3 way view:Move target |Perspective/3 way:Move target |key emulation |"
+  frmPrefWheel rgpWheelMode "Wheel" "" "Wheel command |Wheel zoom |View roll"
+  frmPrefWheel rgpWheelRMode "Wheel+R-button" "" "Wheel command |Wheel zoom |View roll"
+  frmPrefWheel rgpWheel "Wheel zoom" "" "UP:Zoom out  DOWN:Zoom in |UP:Zoom in   DOWN:Zoom out |"
+  
+  frmPrefCopyPaste GroupBox7 "Paste position" "" 
+  frmPrefCopyPaste Label46 "Paste with a gap of this number." "" 
+  frmPrefCopyPaste Label45 "" ""
+  frmPrefCopyPaste Label44 "X" "" 
+  frmPrefCopyPaste Label47 "Y" "" 
+  frmPrefCopyPaste Label48 "Z" "" 
+
+  frmPrefIcon Label49 "X" "" 
+  frmPrefIcon Button7 "New" "" 
+  frmPrefIcon btnSetIconGroup "Update" "" 
+  frmPrefIcon Button9 "Save..." "" 
+  frmPrefIcon Button10 "Open..." "" 
+  frmPrefIcon Button11 "Return to default" "" 
+
+  frmPrefTestRender Label1 "Divide number of curved surface" "" 
+  frmPrefTestRender edtDetail "4" "" 
+  frmPrefTestRender Label3 "EXE Path"
+  frmPrefTestRender Label5 "EXE Path"
+  frmPrefTestRender Label4 "Version"
+
+  frmPrefSave Label40 "Interval of auto save" "" 
+  frmPrefSave Label41 "minutes" "" 
+  frmPrefSave Label42 "Save generations as this number" "" 
+  
+  frmPrefSmartScroll GroupBox1 "ScrollBall"
+  frmPrefSmartScroll RadioGroup1 "Action" "" "Zoom|Wheel Command"
+  frmPrefSmartScroll GroupBox2 "ZoomWheel"
+  frmPrefSmartScroll Label1 "SmartScroll is the trademark of WACOM. MarbleCLAY plug-in for SmartScroll$ is enclosed by the installation folder of MarbleCLAY. In case you use it,$ please drop MarbleCLAY.ssp with a SmartScroll window"
+  
+  
+;ここから下が、追加部分(1999.2.13)----------------------------------------------
+  MainForm actViewCenterSelected "Set center to selected element" "" 
+  MainForm actViewHideAxis "Hide axis and grid"
+
+  frmEnviron Caption "Configration"
+  dlgPrimSquare cbxEdgeSharp "Sharp Edge"
+  dlgPrimSquare cbxVertexSharp "Sharp Vertex"
+  
+  frmPrefColor Label1 "Sharp edge" "" 
+  frmEnviron cbxEnabledMegaPOVexp "Export MegaPOV(*.pov) format" "" 
+  frmEnviron cbxTestRenderReso "Specify resolution" "" 
+
+  frmModel tab4Surface "4 Way" "" 
+  frmModel tabUV "UVD" "" 
+  frmModel tabUVPaint "UV+Perspective(for Paint)" "" 
+  frmModel tabCustom "Custom" "" 
+  frmModel SpeedButton2 "" "Maximize view" 
+  frmModel SpeedButton1 "" "Maximize view" 
+  frmModel SpeedButton3 "" "Maximize view" 
+  frmModel SpeedButton4 "" "Maximize view" 
+
+  frmProperty rgpPosition "Position"
+  frmProperty ESVLabel1 "Position"
+  frmProperty ESVLabel2 "Size"
+  frmProperty ESVLabel3 "Rotate"
+  frmProperty btnApply "Apply" "" 
+  frmProperty btnCancel "CANCEL" "" 
+
+;GARCIA Correct meaning -正しい意味は「選択した面から素材を選ぶ」
+  MainForm actPickMaterial "Pick material from selected face"
+  MainForm actSelectSameMaterial "Select continuous faces with same material"
+  MainForm actSelectMaterial "Select faces with current material"
+  MainForm actMakePolyAll "Fill all polygons"
+  MainForm actMakePolySel "Fill selected polygons"
+  
+  MainForm actContinue "Continue"
+  MainForm actPolySeparate "Detach Polygons"
+  MainForm actPolyTriangle "Triangulate Polygon"
+
+  dlgColisionOffset Caption "Collision offset"
+  dlgColisionOffset Label1 "Offset"
+  
+  dlgPrimSphere Caption "Sphere" "" 
+  dlgPrimSphere Label1 "Divide" "" 
+  dlgPrimSphere Label2 "Z" "" 
+  dlgPrimSphere Label3 "R" "" 
+  dlgPrimSphere Label4 "Position" "" 
+  dlgPrimSphere Label5 "X" "" 
+  dlgPrimSphere Label6 "Y" "" 
+  dlgPrimSphere Label7 "Z" "" 
+  dlgPrimSphere Label8 "Size" "" 
+  dlgPrimSphere Label10 "R" "" 
+  dlgPrimSphere Button1 "OK" "" 
+  dlgPrimSphere Button2 "CANCEL" "" 
+  dlgPrimSphere cbxTriangle "Triangle tessellate" "" 
+
+  dlgPrimSquare Caption "Cube" "" 
+  dlgPrimSquare Label1 "Divide" "" 
+  dlgPrimSquare Label2 "Z" "" 
+  dlgPrimSquare Label3 "Y" "" 
+  dlgPrimSquare Label4 "Position" "" 
+  dlgPrimSquare Label5 "X" "" 
+  dlgPrimSquare Label6 "Y" "" 
+  dlgPrimSquare Label7 "Z" "" 
+  dlgPrimSquare Label8 "Size" "" 
+  dlgPrimSquare Label9 "X" "" 
+  dlgPrimSquare Label10 "X" "" 
+  dlgPrimSquare Label11 "Y" "" 
+  dlgPrimSquare Label12 "Z" "" 
+  dlgPrimSquare Button1 "OK" "" 
+  dlgPrimSquare Button2 "CANCEL" "" 
+
+  dlgTempSizePos Caption "Image Property" "" 
+  dlgTempSizePos Label2 "Size" "" 
+  dlgTempSizePos Label1 "Position" "" 
+  dlgTempSizePos labX "X" "" 
+  dlgTempSizePos labY "Y" "" 
+  dlgTempSizePos labXs "X" "" 
+  dlgTempSizePos labYs "Y" "" 
+  dlgTempSizePos Label3 "X" "" 
+  dlgTempSizePos Label4 "Y" "" 
+  dlgTempSizePos Label5 "Resolution" "" 
+  dlgTempSizePos Button1 "OK" "" 
+  dlgTempSizePos Button2 "CANCEL" "" 
+
+;GARCIA dlgUVTemplate added caption, window box not correct size - dlgUVTemplate にキャプションが追加され、ウィンドウ ボックスのサイズが正しくありません
+  dlgUVTemplate Caption "Bake mesh to UV map image" 
+  dlgUVTemplate Label3 "X" "" 
+  dlgUVTemplate Label4 "Y" "" 
+;GARCIA Added tip: Default set Options menu -> Configuration... -> Texture - 追加のヒント: デフォルト セット オプション メニュー -> 構成... -> テクスチャ
+  dlgUVTemplate Label5 "Resolution" "Default is set in Options menu -> Configuration... -> Texture" 
+  dlgUVTemplate cbxSelectedOnly "Only selected mesh" "" 
+  dlgUVTemplate Button1 "OK" "" 
+  dlgUVTemplate Button2 "CANCEL" "" 
+;GARCIA Selected Mesh Unwrap / UV mapping - 選択したメッシュのアンラップ / UV マッピング
+  dlgUVMap Caption "Selected Mesh Unwrap / UV mapping"
+;GARCIA helpful tip, Next, switch to a UV view, to edit UV - 役に立つヒント、次に、UV ビューに切り替えて、UV を編集します
+  dlgUVMap Button1 "OK" "Next, switch to a UV view, to edit UV" 
+  dlgUVMap Button2 "CANCEL" "" 
+  dlgUVMap ESVGroupBox1 "Preview" "" 
+; GARCIA Unwrap method アンラップ方法
+  dlgUVMap ESVGroupBox2 "Unwrap method" "" 
+  dlgUVMap cbxKeepRatio "Keep ratio" "" 
+  dlgUVMap cbxUnfold "Unfold" "" 
+  dlgUVMap ESVRadioGroup1 "Axis" "" "X Axis|Y Axis|Z Axis"
+  dlgUVMap ESVGroupBox3 "Center" "" 
+  dlgUVMap lblX "X" "" 
+  dlgUVMap lblY "Y" "" 
+  dlgUVMap lblZ "Z" "" 
+  dlgUVMap ESVSpeedCheck2 "objects center" "" 
+  dlgUVMap ESVSpeedCheck3 "designate" "" 
+
+
+  dlgDuplicate Caption "Duplicate" "" 
+  dlgDuplicate rgpType "Style" "" "Stay on |Mirror XZ |Mirror YZ |Mirror XY |Mirror Workplane |"
+  dlgDuplicate cbxWeld "Weld" "" 
+  dlgDuplicate cbxInGroup "Duplicate in same group" "" 
+  dlgDuplicate OKBtn "OK" "" 
+  dlgDuplicate CancelBtn "CANCEL" "" 
+
+  frmRegist Caption "Registration" "" 
+  frmRegist lblUser "User name" "" 
+  frmRegist lblPassWord "Password" "" 
+  frmRegist Button1 "OK" "" 
+  frmRegist Button2 "CANCEL" "" 
+  frmRegist lblFreeVersion "Free Version. Registration is unnecessary"
+  frmRegist lblThankyou "Thank you for your cooperation in the beta test."
+
+  dlgPushByFig Caption "Extrude" "" 
+  dlgPushByFig Label1 "Distance" "" 
+  dlgPushByFig Label2 "Direction" "" 
+  dlgPushByFig rgpType "Style" "" "Parallel |Keep backside|Normal direction |Bevel |Custom direction"
+  dlgPushByFig cbxNotErasePolygn "Left Original Polygon" "" 
+  dlgPushByFig OKBtn "OK" "" 
+  dlgPushByFig CancelBtn "CANCEL" "" 
+
+  dlgEdgeBevel ESVLabel1 "Bevel size" "" 
+  dlgEdgeBevel ESVButton1 "OK" "" 
+  dlgEdgeBevel ESVButton2 "CANCEL" "" 
+
+  dlgWeld Caption "Weld" "" 
+  dlgWeld Label1 "Distance" "" 
+  dlgWeld Label2 "(less than)" "" 
+  dlgWeld cbxAllPoints "Force weld" "" 
+  dlgWeld OKBtn "OK" "" 
+  dlgWeld CancelBtn "CANCEL" "" 
+
+  dlgNaming Caption "Select exist Named Faces to add to it or enter a new Named Faces" "" 
+  dlgNaming Label1 "Named Faces:" "" 
+  dlgNaming OKBtn "OK" "" 
+  dlgNaming CancelBtn "CANCEL" "" 
+  dlgFreezeSpline Caption "Freeze (bake a clone) Subpatch mesh to Polygon mesh"   "Mesh must be in subpatch! Qty: 1 is original, 2 is half polys, 4 is what you see, +5 increased smoothing & polys"
+  dlgFreezeSpline Label1 "Qty-See Status bar" "                                                                             "
+  dlgFreezeSpline OKBtn "OK" "" 
+  dlgFreezeSpline CancelBtn "CANCEL" "" 
+
+  dlgGridSet Caption "Grid property" "" 
+  dlgGridSet Label1 "Width" "" 
+  dlgGridSet Label2 "Section" "" 
+  dlgGridSet cbxGridSnap "Snap" "" 
+  dlgGridSet OKBtn "OK" "" 
+  dlgGridSet CancelBtn "CANCEL" "" 
+
+
+  frmEnviron cbxDrawCrossPers "Draw Crosshair(Perspective)" "" 
+  frmEnviron cbxDrawCross3Way "Draw Crosshair(3Way)" "" 
+  frmEnviron cbxDrawGridPers "Drawing plane's Grid(Perspective)" "" 
+  frmEnviron cbxDrawGrid3Way "Drawing plane's Grid(3Way)" "" 
+  frmEnviron cbxDragOverScreen "Drag over screen side"
+
+  MainForm actSplineWeightP "Weight up"
+  MainForm actSplineWeightM "Weight down"
+
+  MainForm actHelp1Step "1Step tutorial..."
+  MainForm actLathe "Lathe..."
+
+  dlgLathe Caption "Lathe" "" 
+  dlgLathe Label1 "Divide" "" 
+  dlgLathe cbxConnect "Connect on center" "" 
+  dlgLathe Button1 "OK" "" 
+  dlgLathe Button2 "CANCEL" "" 
+
+  MainForm actDeleteObject "Delete obj" ""
+  
+  frmObjWindow pnlInfo "Attribute"
+  frmObjWindow btnNewObj "" "Create new empty obj" 
+  frmObjWindow SpeedButton3 "" "Create new empty Sub mesh" 
+
+  frmView Label1 "Front face"
+  frmView Label2 "Subpatch"
+  
+  MainForm actStatusBarTop "Dock to Top" ""
+  MainForm actStatusBarBottom "Dock toBottom" ""
+  MainForm actStatusBarClose "Close" ""
+  
+  
+  MainForm actAlign "Align vertices..." ""
+  MainForm actSelectInverse  "Select inverse" ""
+
+  MainForm actScriptMenu "Script"
+  MainForm actScriptExecute "Execute Script..."
+  
+  MainForm actVectorCalc "Show Vector calculator" ""
+  
+  dlgAlign Caption "Align vertices" ""
+  dlgAlign cbxAlignX "X position" "" 
+  dlgAlign cbxAlignY "Y position" "" 
+  dlgAlign cbxAlignZ "Z position" "" 
+  dlgAlign rgpX "" "" "Min|Max|Center|Specify"
+  dlgAlign rgpY "" "" "Min|Max|Center|Specify"
+  dlgAlign rgpZ "" "" "Min|Max|Center|Specify"
+
+  dlgAlign btnOK "OK" "" 
+  dlgAlign btnCANCEL "CANCEL" "" 
+
+  frmPrefNudge Label1 "PersView: Pess Ctrl Key, Nudge Z direction" "" 
+  frmPrefNudge Label2 "Press Space bar, x10 Nudge ." "" 
+  frmPrefNudge Label3 "Nudge step" "" 
+  frmPrefNudge RadioGroup1 "CursorKey" "" "Nudge|View Roll"
+  frmPrefNudge RadioGroup2 "Cursor+ALT Key" "" "Nudge|View Roll"
+
+  frmPref3WayPreview gbx3Way "3Way"
+  frmPref3WayPreview gbxUnselected "Deactivated object"
+  frmPref3WayPreview rgpViewMove "When moving viewpoint" "" "Wire |Wire with shadow |Don't change preview mode |Auto(Change mode automatically) |"
+
+  frmEnviron actWindowsStyle "Windows Style"
+  frmEnviron actBaseColor "Change Base color"
+  frmEnviron actLabelColor "Change Label color"
+  frmEnviron actLabelFontColor "Change Label's Font color"
+  frmEnviron actCheckBoxColor "Change CheckBox color"
+  frmEnviron actActiveBarColor "Change Active view color"
+  frmEnviron actPanelColor "Change Panel color"
+  frmEnviron actButtonColor "Change Button color"
+
+  frmEnviron actViewRollOnlyPers "Dolly view only PersView"
+  frmEnviron actViewZoomOnlyPers "ZoomIn/Out only PersView"
+  frmEnviron actViewPanEnable "Change of a center of view"
+  frmEnviron actViewRollAxisChange "Roll axis change"
+
+  frmImport cbxUVexport "Export UV"
+  frmImport cbxNVexport "Export Normal"
+  frmImport cbxFlip "Flip face"
+  frmImport cbxAlwaysUse "Always use this setting when this file type"
+  frmImport ESVLabel1 "Scale"
+  frmImport ESVLabel2 "Size"
+
+  ;GARCIA frmMaterial Caption "New material"
+  frmMaterial Caption "MATERIAL"  
+  ;GARCIA  "Select image" "Select texture from image browser" - 「画像を選択」「画像ブラウザからテクスチャを選択」
+  frameMaterial lblImport "Select image" "Select texture from image browser"
+  ;GARCIA "Attach to object" "Attach UV texture to selected object" - 「オブジェクトにアタッチ」「選択したオブジェクトにUVテクスチャをアタッチ」
+  frameMaterial lblUVTemplate "Attach UV to object" "Attach UV texture to selected object"
+  ;GARCIA "Remove UV" "Remove UV texture from Material" - 「UVを削除」「マテリアルからUVテクスチャを削除」
+  frameMaterial lblDetach "Remove UV" "Remove UV texture from Material"
+  frameMaterial StaticText1 "Not select"
+  
+  frmCalc Caption V-CALC
+  frmLoope Caption Loupe
+  ;
+  frameMaterial ESVLabel1 VP
+  frameMaterial ESVLabel2 FP
+
+  frmLogMessage Caption "Script/Message"
+
+  dlgMoveToWorkplane cbxMoveToCurrent "Move to parallel plane of selected view" "" 
+  dlgMoveToWorkplane cbxMoveToPars "Move to workplane of perspective view" "" 
+  dlgMoveToWorkplane ESVButton1 "OK" "" 
+  dlgMoveToWorkplane ESVButton2 "CANCEL" "" 
+  
+  dlgFin Label1 "Density"
+  dlgFin Label2 "Length"
+  dlgFin Label3 "Width"
+  dlgFin Label4 "Segment"
+  dlgFin Label5 "Disorder"
+
+  
+  dlgEnvWizard Caption "Wizard -  Configure of GUI Operation"
+  dlgEnvWizard btnBack "Back"  
+  dlgEnvWizard btnNext "Next"  
+  dlgEnvWizard btnFinish "Finish"  
+  dlgEnvWizard btnCancel "Cancel"  
+
+  dlgEnvWizard lblToolBars "Toolbars"
+  dlgEnvWizard btnSimpleTools "Simple"
+  dlgEnvWizard btnComplexTools "Default"
+  
+  
+  dlgEnvWizard lblViewRollBase "View roll(Base)"
+  dlgEnvWizard lblViewRollBaseAltDrag "Change of viewpoint is possible by dragging a left button,$ pushing the Alt key. Assignment also to another key $ is possible by setting up QuickTool."
+  dlgEnvWizard lblViewRollBaseQuickArea "Change of a viewpoint is possible by carrying out the left drag$ of the circumference part of work area(QuickArea)."
+  dlgEnvWizard lblViewRollBaseNext "Please click the 'Next'.$The viewpoint change by another method is set up."
+  dlgEnvWizard lblViewRollCustom "View roll(Customize)"
+  dlgEnvWizard btnMidAndRight "The middle button of a mouse and a right button are pushed.."
+  dlgEnvWizard lblMidAndRight "Advantage:It does not collide with other functions.$Fault: It is hard to push."  
+  dlgEnvWizard btnMid "Only the middle button of a mouse is pushed and it is a drag."
+  dlgEnvWizard lblMid "Advantage:It is easy to push.$Fault:It is hard coming to make a gazing point change only with a mouse."  
+  dlgEnvWizard btnRight "Only the right button of a mouse is pushed."
+  dlgEnvWizard lblRight "Advantage:It is easy to push.$Fault:The magnet range and weight operation become impossible $ only with a mouse."  
+  dlgEnvWizard btnArvelBall "The ball of the mouse with a trackball of Arvel is used."
+  dlgEnvWizard lblArvelBall "Advantage:It is easy to roll.$Fault:It is hard coming only for a mouse to perform zoom operation etc."  
+  dlgEnvWizard btnSmartScroll "SmartScroll device of Wacom is used"
+  dlgEnvWizard lblSmartScroll "Other methods and combined use are possible."  
+
+  dlgEnvWizard lblZoomBase "Zoom(Base)"
+  dlgEnvWizard lblZoomBaseAltDrag "Change of zoom factor is possible by dragging a right button,$ pushing the Alt key. Assignment also to another key $ is possible by setting up QuickTool"
+  dlgEnvWizard lblZoomBaseQuickArea "Change of a zoom factor is possible by carrying out the right drag$ of the circumference part of work area(QuickArea)"
+  dlgEnvWizard lblZoomBaseNext "Please click the 'Next'.$The zoom factor change by another method is set up."
+
+  dlgEnvWizard lblSmartScrollTitle "SmartScroll"
+  dlgEnvWizard lblSmartScrollHowto "SmartScroll is the trademark of WACOM. MarbleCLAY plug-in for SmartScroll$ is enclosed by the installation folder of MarbleCLAY. In case you use it,$ please drop MarbleCLAY.ssp with a SmartScroll window"
+
+
+  dlgEnvWizard lblZoomCustom "Zoom(Customize)"
+  dlgEnvWizard btnZoomWheel "A mouse wheel is turned and it is zoom"
+  dlgEnvWizard lblZoomWheel "Advantage:It is easy to zoom. /Fault:WheelCommand cannot be used."
+  dlgEnvWizard btnZoomWheelCtrl "A wheel is turned pushing the Ctrl key or a right button, and it is zoom"
+  dlgEnvWizard lblZoomWheelCtrl "Advantage:It does not collide with other functions $Fault:An operation procedure increases."
+  dlgEnvWizard lblWheelZoomDisableReason "Impossible:Since viewpoint rotation is assigned to the ball of an Arvel mouse."
+  
+  dlgEnvWizard lblPanBase "Pan(Base)"
+  dlgEnvWizard lblPanBaseSpace "Change of gazing point is possible by dragging a right button,$ pushing the Space key. Assignment also to another key $ is possible by setting up QuickTool"
+  dlgEnvWizard lblPanBaseNext "Please click the 'Next'.$The gazing point change by another method is set up"
+  
+  dlgEnvWizard lblPanCustom "Pan(Customize)"
+  dlgEnvWizard lblMiddlePan "Change of a gazing point is possible by dragging an middle button."
+  dlgEnvWizard lblMidPanDisableReason "Impossible:The middle button is assigned to another function. Or a setup using an Arvel mouse."
+  dlgEnvWizard lblMidAndRightPan "Change of a gazing point is possible by dragging an middle+right button."
+  dlgEnvWizard btnQuickAreaPan "Gazing point movement is assigned to QuickArea."
+  dlgEnvWizard lblQuickAreaPan  "Fault:Viewpoint change becomes impossible in QuickArea."
+  dlgEnvWizard lblStart "Please push 'Next' which sets up the operation method $ with an operation setting wizard."
+  dlgEnvWizard lblFinish  "A push on a 'Finish' button reflects a setup.$$When you want to perform a more detailed setup, $ it is an Option-> Configuration. Please perform."
+  
+  frmMapBrowser btnLoad "Load"
+  frmMapBrowser btnPaste "Paste"
+}
+
+Text {
+  restrRegist Registration completed.$You can save as MCL format.
+  restrAlreadyRegist  Registered
+  restrNotRegist   "Too complex object!$$Before registration, cannot save object that has "
+  restrNotRegist2 "over faces as MCL format.$$In order to collect information about user's comments, please register.$Check ReadMe.txt or my web site."
+  resterNotSaftyEnd  "It is considered that the program was closed irregularly last time.$Do you want to open backup file?$"
+  restrDocChanged  "This document has been changed, do you want to save?"
+  restrDocReload  "The change to this document is canceled, do you want to continue?"
+  restrTooMuchSelectPolygn  "This command can be used with only one face$"
+  restrNoSel  <None>
+  restrMulti  <Multi>
+  restrNotFigure  "is not a number."
+  restrMeshDrop  "Do you want to remove mesh-line in texture image?$Press OK to remove current texture information."
+  restr3MenRyosen " has edges which were joind by more than 3 faces.$Can't save as RDS format"
+  restrNotFacetLine " has edges which don't construct a face.$Do you want to export these edges?"
+  restrFile  "This file "
+  restrAlreadyOpenDocument "This document is already open."
+  restrOverWrite " already exists. Do you want to update?"
+  restrNotSelectExportObj Please select objects you want to export.
+  restrGroup Group
+  restrNotMesh  This file doesn't include meshed surface.
+  restrRDSreadNow "Now open RDS..."
+  restrMCLreadNow "Now open MCL..."
+  restrVertex (Vertex)
+  restrUV (Texture coordinate)
+  restrEdge (Edge)
+  restrMap (Image)
+  restrFinish (Now working for finish)
+  restrPolygon (Polygon)
+  restrNotRDS  This isn't RayDreamStudio format
+  restrInvalidFileType  Invalid type of format
+  restrUniverse  "Universe"
+  restrNotRok  Can't distinguish file format.
+  restrNotDXF  This isn't a DXF format file.
+  restrOBJreadNow Now open OBJ...
+  restrDXFreadNow Now open DXF...
+  restrInvalidShortCut  This shortcut is invalid.
+  restrCannotMenuShortCut  "You can't register shortcuts except ALT key in main menu."
+  restrCantDeleteEx  Can't ext-delete!$Ext-delete can be used for only one face or edge or vertex.
+
+  restrMoveHere  (Move here)
+  restrMoveAndFusion  [Move and fusion]
+  restrEmergency  " This application will be ended by force because of more than 90% consumption of system resource."
+
+  restrInvalidGrpOp "'Group operation' can perform only to a single object.."
+  restrCantGroupingLocked "Group operation canceled, because include locked element."
+
+  restrInvalidColision "Vertex colision can be used for only one object"
+
+  restrInstall  Associate file extension.You can release association by uninstall.
+  restrUnInstall  "Clear registry. If you want to completely uninstall, delete files manually."
+  restrUninstallAsk  "If you do uninstall, registration and association will be removed.$continue？"
+
+  restrCantMakeUV "'Selected Mesh Unwrap / UV mapping' can perform only to a single object."
+  restrCantUVBurn "'UV bake' can perform only to a single object."
+
+
+  restr0solid Solid line
+  restr1Dash Dotted 1
+  restr2Dash Dotted 2
+  restr3Dash Dotted 3
+  restr4Dash Dotted 4
+  
+  restrPovVer0 "MegaPov"
+  restrPovVer1 "POV-Ray"
+  
+  restrUVcustom Custom
+  restrUVBox Box
+  restrUVCylindrical Cylindrical
+  restrUVSphere Sphere
+  restrUVProj ViewProj
+  restrUVcantpreview "Cant Preview(unfold)"
+
+  restrUVcustomInfo "Attach UV value from XYZ values.$Best method for User-Customize."
+  restrUVBoxInfo "Box projection"
+  restrUVCylindricalInfo "Cylindrical projection"
+  restrUVSphereInfo "Sphere projection"
+
+
+  restrNotInstalledMegaPOV "MegaPOV is not installed."
+  restrYes &Yes
+  restrNo &No
+  restrCancel &Cancel
+  
+  restrAxis Axis
+  
+  restrToolClickOpen "Tool click open"
+  restrAutoOpen "Auto open"
+  restrAutoClose "Auto close"
+  restrClose Close
+  restrDockPin "Click: AutoClose/Hide$Drag: Docking"
+  restrUnDockPin "Drag: Floating"
+  
+  restrWSdefault Default
+  restrWS640 640x480
+  restrWS1280   1280x1024
+  restrWSsave "Workspace save..."
+  restrWSload "Workspace import..."
+  
+  restrNoMoreAdd "Can not add an element, because selected mesh is locked. Please select unlocked mesh."
+  restrNoAdd "Can't add vertex"
+  restrNoAddLock "vertex added to another Mesh" 
+  restrNoAddLockObj "Locked object" 
+  restrNoAddDeforming "Deforming object" 
+  restrNoAddLockElem "Locked element" 
+  restrNoAddHalfMirror "Half fixed mirror" 
+  restrNoWeldLock "Snap to element, because can't weld locked verteces. "
+  
+  restrNotFoundFile "File not found."
+
+  restrCreateNewMesh "Created New Mesh..."
+  
+  restrDolly Dolly
+  restrPan Pan
+  restrZoom Zoom
+  
+  restrMcl MarbleCLAY
+  restrCar Carrara
+  restrRds RayDreamStudio
+  restrDxf DXF[3DFACE]
+  restrObj Wavefront
+  restrRok "Hexa-Great 3D"
+  restrPovRay POV-Ray
+  restr3DS "3D studio"
+  restrRRT "Redqueen"
+  restrYAF "YafRay(xml)"
+  restrLWO "Lightwave object"
+  
+  restrExportNV "Export normal"
+  restrExportMTL "Export .mtl file"
+  restrExportTRI "Export after triangulate"
+  restrExportKeepImg "Keep texture image file"
+  restrExportBackwardUV "UV arrange behind faces"
+  restrExportLWO2 "LWO2 format"
+  restrImportUVWeld "Weld near UVs"
+  
+
+  
+  restrBadHistory  "Bad History hierarchy"
+  restrErrorInfinityLoop "Invalid vertex link!"
+  restrCantLathe "Can't make lathe from branched line."
+  restrMomoryRelease Release memory
+  restrNotSelectPolyline Polyline not selected.
+
+  restrNewItem New
+  restrChangeItem Change
+  restrMapType Map
+  restrValue1 Value0-1
+  restrValue255 Value0-255
+  restrVector4 Array[4]
+  restrColor3 "RGB Color"
+  restrAlias Link
+  restrARBShader ARB Shader
+  restrMATSpider MATSpider
+
+  
+  restrDiffuse Diffuse
+  restrDiffuseMap DiffuseMap
+  restrSpecular Specular
+  restrSpecularMap SpecularMap
+  restrShininess Shininess
+  restrShininessMap ShininessMap
+  restrAmbient Ambient
+  restrAmbientMap AmbientMap
+  restrGlow Glow
+  restrGlowMap GlowMap
+  restrBump Bump
+  restrBumpMap BumpMap
+  restrMat1 Diffuse
+  restrMat2 DiffuseMap
+  restrMat3 Specular
+  restrMat4 SpecularMap
+  restrMat5 Shininess
+  restrMat6 ShininessMap
+  restrMat7 Ambient
+  restrMat8 AmbientMap
+  restrMat9 Glow
+  restrMat10 GlowMap
+  restrMat11 Alpha
+  restrMat12 AlphaMap
+  restrMat13 Bump
+  restrMat14 BumpMap
+  restrMat15 Displace
+  restrMat16 DisplaceMap
+  restrMat17 Reflection
+  restrMat18 ReflectionMap
+  restrMat19 Refraction
+  restrMat20 RefractionMap
+  restrMat21 Transparency
+  restrMat22 TransparencyMap
+
+  restrEnvControl Control
+  restrEnvControl1 View(QucikArea)
+  restrEnvControl2 View(SmartScroll)
+  restrEnvMouse MouseWheel
+  restrEnvCursor Cursor
+  restrEnvCopyPaste Copy&Paste
+  restrEnvControl3 ControlOption
+  restrEnvDisplay Display
+  restrEnvOpenGL OpenGL
+  restrEnvSoft SoftwareDraw
+  restrEnvColor Color
+  restrEnvDisplay1 DisplayOption1
+  restrEnvDisplay2 DisplayOption2
+  restrEnvOther Other
+  restrEnvSave Save
+  restrEnvGrid Grid
+  restrEnvTestRender TestRendering
+  restrEnvTemplate Texture
+  restrEnvShortCut Shortcut
+
+  restrCantDeleteActiveBone "Can't delete active bones."
+  restrConflictShortcut "There is a shortcut-key conflicted.$Do you want close window?"
+
+;GARCIA translation not used? 翻訳は使用されていません
+  restrViewCtrlAdjust "Snap axis"
+  restrViewCtrlAdjustCtrl "Snap when CTRL Key"
+  restrViewCtrlLimit "Limited angle"
+  restrViewCtrlOrtho "Temporarily Ortho"
+
+  restrInvalidSmartGuideLine_Mirror "SmartGuideline:Mirror can be used for only one selected SmartGuideline(crosssection)"
+
+  restrCannotSave "Can't save."
+
+
+  ELErrorMsg "MarbleCLAY.exe has encountered a problem. We are sorry for the inconvenience."
+  ELRestart "Restart application."
+  ELTerminate "Terminate application."
+  ELPlease "Please tell us about this problem."
+  ELDescription "We have created an error report that you can send to us. We will treat this report as confidential and anonymous."
+
+  ELDetails "To see what data the error report contains,"
+  ELClickHere "click here."
+  ELEMail "Email address (optional):"
+
+  ELSendButton "&Send Error Report"
+  ELDontSendButton "&Don't Send"
+
+  ELCheckSend "&Send this error via Internet"
+  ELCheckScreenShot "&Attach a Screenshot image"
+  ELCheckCopyToClipboard "&Copy to Clipboard"
+  ELSupport "Go to the Support Page"
+
+  ELSendSend "Send."
+  ELSendMsg "Message"
+  ELSendResolve "Resolving DNS..."
+  ELSendLogin "Login..."
+  ELSendConnecting "Connecting with server..."
+  ELSendConnected "Connected with server."
+  ELSendSending "Sending message..."
+  ELSendSent "Message sent."
+  ELSendProject "Select project..."
+  ELSendSearching "Searching..."
+  ELSendModifying "Modifying..."
+  ELSendDisconnecting "Disconnecting..."
+  ELSendDisconnected "Disconnected."
+
+
+
+}

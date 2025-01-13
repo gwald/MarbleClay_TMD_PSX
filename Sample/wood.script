@@ -1,0 +1,71 @@
+# See "C:\MarbleCLAY\Plugin\PSX\runbatch.readme" for more information about this script.
+
+#!echo off
+!msg wood.script is starting! ^^These popup dialog boxes may get lost and make marbleclay non-responsive ^^Just use alt tab or check your task bar (grouping) to show the pop up again. 
+
+!msg Hello... This is a tutorial script, it is very verbose because the echo feature is on, which is recommended when creating a new script. ^^It is located at: C:\MarbleCLAY\Sample\wood.script if you want to see what it's doing!
+!msg First we tell marblelcay where to output all the files using a series of !assetpath commands
+
+!assetpath C:\MarbleCLAY
+!assetpath temp
+!assetpath  wood
+
+
+@echo This is an echo DOS command line and with !echo on it gets display back.
+
+!msg We can confirm the location with !pwd
+!pwd  
+
+!msg This folder may or may not have files already there, it's best to always start with nothing there. ^^The "!rm -rf *" command will remove everything in the current location - so be very careful using it!
+!rm -rf *
+
+!msg Next we run !rsdexport - Note PSX uses fix point, so points using 1 (as in 1 meter from your modeller) will need to be scale more than 20.
+
+!rsdexport wood wood.rsd 20.0  1
+
+!msg We can also export our model and textures as .obj file using !objexport
+
+!objexport wood wood.obj 1.0  
+
+
+!msg Now we can do stuff with the models - lets convert the .obj to .dae and view it with Assimp! ^^With echo on, it shows the command line and then the results (if any) ^^You can achieve the same thing with !echo off using pipe commands ( command > textfile.txt) like this:
+
+!assimp export wood.obj wood.dae > conv.txt
+
+!msg To display the results, you use !cat like this: ^^!cat conv.txt ^^And you can # comment out these lines when not needed etc.
+!cat conv.txt
+
+!msg The Assimp 3D model viewer lets us view many types of 3D formats, it requires the directX runtime to be installed, see RunBatch.readme for more information. ^^Left click to rotate model ^^Right click to rotate light ^^Middle click/scroll wheel to zoom in/out.
+
+#requires DirectX installed
+!assimp_viewer  wood.dae
+
+!msg This model uses the same image applied to every polygon or 'stamped', there is no UV unwrapping or UV map, did you notice the bump map? 
+
+
+# BONUS 1
+#!msg We can do the PSX.EXE creation manualy in a too script, it would look something like this, first use ImageMagick's convert the BMP files- see convert.txt
+#!convert wood0.bmp  -verbose   -auto-level -resize 256!x128! -type palette   -colors 256  example.bmp
+#!msg We have fixed the texture so now we can convert it to PSX .tim format using img2tim - see img2tim.txt 
+#!img2tim -bpp 8  -tcol 0 0 0 -org 640 128 -plt 640 0  -o PSX.tim   example.bmp 
+
+!msg We can turn the psx.exe file into a bootable PSX cue/bin image with !psxexe2iso filename REGION where filename has no extention and REGION is SCEE, SCEA or SCEI
+
+#create cue/bin file 
+!psxexe2iso wood SCEI 
+
+#!msg We can run the .cue files like this:
+!no$psx PSX-SCEI.cue
+
+
+!msg If you make a mistake with a command, ie !cat.exe it will tell you, like this:
+!cat.exe
+
+
+!msg The End, be sure to see how this script was made C:\MarbleCLAY\Sample\wood.script 
+
+# BONUS 2
+#For in game debugging it's best to use the full no$psx version with the TTY terminal log window, but it can crash when closing, freezing marbleclay!
+#C:\emulators\NOPSX\nopsx.exe psx.exe
+#If it happens regularly, use a batch to close it properly, IE:
+#"C:\MarbleCLAY\Plugin\PSX\kill.bat"

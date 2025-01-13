@@ -1,0 +1,1133 @@
+Font {
+;  Name "ＭＳ Ｐゴシック"
+;  Name "Y.OzFontB"
+  Name "Tahoma"
+  Size 9
+;  Size 10
+  Bold 0
+}
+
+Form {
+  MainForm tbrObject "Object Browser" "" 
+  MainForm btnObject "Object" "オブジェクトウインドウ表示" 
+  MainForm tbrShading "Shading mode" "" 
+  MainForm imgPreview "" "表示オプションウインドウを表示" 
+  MainForm tbrStatus "Status info" "" 
+  MainForm Panel1 "Panel1" "" 
+  MainForm pnlInfo "Message" "" 
+  MainForm tbrProp "Propery window" "" 
+  MainForm btnProp "Property" "プロパティウインドウ表示" 
+  MainForm tbrPaint "Image control" "" 
+  MainForm imgImage "" "イメージオプションウインドウを表示" 
+  MainForm tbrSelect "Select Tools" "" 
+  MainForm imgSel "" "選択ツールオプションウインドウを表示" 
+  MainForm tbrQuick "Quick Tools" "" 
+  MainForm tbrTools "Modal Tools" "" 
+  MainForm imgTool "" "ツールオプションウインドウを表示" 
+  MainForm tbrViewPort "View Tools" "" 
+  MainForm imgCam "" "視点オプションウインドウを表示" 
+  MainForm tbrUndo "Select Tools" "" 
+  MainForm tbrSelFilter "Shading mode" "" 
+  MainForm actPreview1 "ワイヤーフレーム1" "稜線プレビュー " 
+  MainForm actPreview2 "ワイヤーフレーム2" "陰影付き稜線プレビュー  " 
+  MainForm actPreview3 "シェーディング1(面と辺) " "隠面消去プレビュー " 
+  MainForm actPreview4 "シェーディング2(面のみ)" "隠面消去プレビュー2 " 
+  MainForm actPreview5 "テクスチャ表示" "テクスチャプレビュー " 
+  MainForm actPreview6 "強調表示" "強調表示 " 
+  MainForm actPreview7 "選択エッジの上書き" "選択エッジの上書き" 
+  MainForm actPreviewAdvancedShader "高度なシェーディング" "頂点/ピクセルシェーダー" 
+  MainForm actPreviewSmooth "スムースシェーディング" "スムースシェーディング" 
+  MainForm actOpenGL "OpenGL表示" "OpenGL表示" 
+  MainForm actToolObject "オブジェクト" "" 
+  MainForm actToolShading "プレビュー" "" 
+  MainForm actToolStatus "ステータス" "" 
+  MainForm actToolProp "プロパティ" "" 
+  MainForm actToolFigure "図面分割" "" 
+  MainForm actToolSpline "曲面化"
+  MainForm actToolMirror "対称図形"
+  MainForm actToolQuickR "クイックツール(右ボタン)"
+  MainForm actToolBone "ボーン操作"
+  
+  MainForm actClockwise "時計回り" "" 
+  MainForm actAntiClockwise "反時計回り" "" 
+  MainForm actNoneRev "表裏判定無し" "" 
+  MainForm actAllocDummy "Dummy座標の割り当て..." "" 
+  MainForm actImgOpen "画像を読みこむ..." "画像を読みこむ" 
+  MainForm actImgCopy "画像をクリップボードへ転送" "画像をクリップボードへ" 
+  MainForm actImgSoft "ペイントソフトを起動" "ペイントソフト起動" 
+  MainForm actImgPaste "画像をクリップボードから転送" "画像をクリップボードから" 
+  MainForm actBooleanCut "ブーリアンカット..." ""
+  MainForm actEdgeSeparate "エッジで分離" ""
+  MainForm actEdgeBevel "べベルエッジ" ""
+  MainForm actEdgeDiagonalFlip "対角線の反転" ""
+
+  MainForm actUVMapMake "UV割り当て..." "" 
+  MainForm actImgUV "UVテンプレート/焼付け" "" 
+  MainForm actModelingTemplate "モデリングテンプレート" "" 
+  MainForm actImgXY "XY平面に読みこみ..." "" 
+  MainForm actImgYZ "YZ平面に読みこみ" "" 
+  MainForm actImgXZ "XZ平面に読みこみ..." "" 
+  MainForm actImgUVLoad "UV平面に読みこみ..." "" 
+  MainForm actSelPoint "一点選択" "" 
+  MainForm actSelRect "範囲選択" "" 
+  MainForm actSelRel "マグネット選択" "" 
+  MainForm actSelFreeHand "投げ縄選択" "" 
+  MainForm actSelPaint "連続選択" "" 
+  MainForm actToolPaint "イメージ" "" 
+  MainForm actToolQuick "クイックツール" "" 
+  MainForm actToolSelect "選択ツール" "" 
+  MainForm actToolTools "編集ツール" "" 
+  MainForm actToolViewPort "ビュー" "" 
+  MainForm actUndo "元に戻す" "" 
+  MainForm actRedo "やり直す" "" 
+  MainForm actToolUndo "アンドゥ" "" 
+  MainForm actXYtop "上" "" 
+  MainForm actXYbottom "下" "" 
+  MainForm actXZleft "左" "" 
+  MainForm axtXZright "右" "" 
+  MainForm actYZface "正面" "" 
+  MainForm actYZback "背面" "" 
+  MainForm actLoope "ルーペ表示" "" 
+  MainForm act3FigPers "パースペクティブ面に切り替え" "" 
+  MainForm act3FigXY "XY面に切り替え" "" 
+  MainForm act3FigYZ "YZ面に切り替え" "" 
+  MainForm act3FigXZ "XZ面に切り替え" "" 
+  MainForm act3FigLarge "最大化<->通常切り替え" "" 
+  MainForm actFigChangeToUVD "XYZ<->UVD切り替え" "" 
+  MainForm actViewNames "オブジェクト名を表示" "" 
+  MainForm actMenuFile "&File" "" 
+  MainForm actMenuEdit "&Edit" "" 
+  MainForm actMenuModeling "&MeshModeling" "" 
+  MainForm actMenuImage "&Image" "" 
+  MainForm actMenuView "&View" "" 
+  MainForm actMenuOption "&Option" "" 
+  MainForm actMenuWindow "&Window" "" 
+  MainForm actMenuHelp "&Help" "" 
+  MainForm actDelete "削除" "" 
+  MainForm actBreak "中止" "" 
+  MainForm actSplineMesh "曲面化1" "" 
+  MainForm actSplinePatch "曲面化2" "" 
+  MainForm actMeshGuage "曲面：制御ポリゴン表示" "制御ポリゴン表示" 
+  MainForm actMeshPreview "曲面：曲面として表示" "曲面として表示" 
+  MainForm actFilterPoint "フィルター：頂点" "" 
+  MainForm actFilterEdge "フィルター：稜線" "" 
+  MainForm actFilterPoly "フィルター：面" "" 
+  MainForm actFilterRevPoly "フィルター：裏面" "" 
+  MainForm actFilterRel "フィルター：接続要素" "" 
+  MainForm actPolyFlip "選択面の向きを反転" "" 
+  MainForm actPolyAdjust "全ての面を選択面と同じ向きに揃える" "" 
+  MainForm actTest "Test" "" 
+  MainForm actSelMenuNone "取消" "" 
+  MainForm actSelMenuFront "フィルター" "" 
+  MainForm actSelMenuAll "全て" "" 
+  MainForm actSelMenuAdd "追加" "" 
+  MainForm actSelMenuSub "除外" "" 
+  MainForm actPolyPushByFig "数値で押し出し" "" 
+  MainForm actFreezSpline "曲面をポリゴン化" "" 
+  MainForm actDuplicate "複製..." "" 
+  MainForm actArrayDuplicate "連続複製..." "" 
+  MainForm actGridOnOff "グリッドに吸着" "" 
+  MainForm actGridSet "グリッド設定..." "" 
+  MainForm actFileSave "上書き保存..." "" 
+  MainForm actFileSaveAs "名前をつけて保存..." "" 
+  MainForm actFileSaveAll "全て保存..." "" 
+  MainForm actFileClose "ドキュメントを閉じる" "" 
+  MainForm actFileReload "再読み込み" "" 
+  MainForm actFileBack "戻る"
+  MainForm actFileForward "進む"
+ 
+  MainForm actFileOpen "ドキュメントを開く..." "" 
+  MainForm actPolyUnHide "隠した部分を表示" "" 
+  MainForm actPolyUnSelectHide "選択部以外を隠す" "" 
+  MainForm actPolyHide "選択部を隠す" "" 
+  MainForm actNaming "選択部に名前をつける" "" 
+  MainForm actPolyNaming "新規名称..." "" 
+  MainForm actSplineDettach "曲面化解除" "" 
+  MainForm actCursorChange "参照面をカーソル位置に移動" "" 
+  MainForm actRefPlaneReset "参照面をリセット(作業面と一致させる)" "" 
+  MainForm actDeleteEx "特殊削除" "" 
+  MainForm actWeld "溶接..." "" 
+  MainForm actMoveToWorkPlane "選択頂点を作業面に移動" "" 
+  MainForm actColorPanel "マテリアル" "" 
+  MainForm actObjectSelect "接続面(線・点)を全て選択" "" 
+  MainForm actToolSelFilter "選択フィルター" "" 
+  MainForm actPolyChangeColor "選択ポリゴンを現在の色に変更 " "" 
+  MainForm actPolyFlat "ポリゴンを平面化 " "" 
+  MainForm actRefresh "画面のリフレッシュ" "" 
+  MainForm actPolyCruster "ポリゴンリストの最適化" "" 
+  MainForm actPolyActive "選択状態を保つ" "" 
+  MainForm actEdgeSharp "エッジを鋭くする" "" 
+  MainForm actEdgeSmooth "エッジを滑らかにする" "" 
+  MainForm actVertexSharp "頂点を尖らせる(ウェイト最大) " "" 
+  MainForm actVertexSmooth "頂点を滑らかにする(ウェイト０)" "" 
+  MainForm actPolySubdivide "再分割" "" 
+  MainForm actAllMirror "簡易対称モード" "" 
+  MainForm actMirror "選択要素の対称図形を作成" "" 
+  MainForm actEffectRelax "リラックスフィルター1" "" 
+  MainForm actEffectRelax2 "リラックスフィルター2" "" 
+  MainForm actEffectBumpy "バンピーフィルター" "" 
+  MainForm actUnMirror "対称解除" "" 
+  MainForm actMenuMirrorCurve "Symmetric/&Curve" "" 
+  MainForm actFreezMirror "対称図形を固定" "" 
+  MainForm actSelFrontMenu "表向きの面のみ選択(範囲選択時)" "" 
+  MainForm actMirrorCenterPoint "選択頂点を対称面上に固定する" "" 
+  MainForm actCopy "コピー" "" 
+  MainForm actPaste "貼り付け" "" 
+  MainForm actCut "切り取り" "" 
+  MainForm actDrawLockedVertex "ロックされた頂点を表示" "" 
+  MainForm actRectSelectFront "範囲選択時 表面選択" "" 
+  MainForm actRectSelectAll "範囲選択時 全て選択" "" 
+  MainForm actRectSelectOpenMenu "範囲選択時 メニュー表示" "" 
+  MainForm actOptionObj "オブジェクトウインドウ表示" "" 
+  MainForm actOptionProp "プロパティウインドウ表示" "" 
+  MainForm actOptionMaterial "マテリアルウインドウ表示" "" 
+  MainForm actOptionPreview "プレビューオプション表示" "" 
+  MainForm actOptionView "ビューオプション表示" "" 
+  MainForm actOptionTool "ツールオプション表示" "" 
+  MainForm actOptionScript "メッセージ/スクリプトウインドウ表示" "" 
+  MainForm actOptionSelect "選択オプション表示" "" 
+  MainForm actFloatingTray "フローティングトレイ表示" "" 
+  MainForm actRightTrayOpen "右のトレイを開く"
+  MainForm actLeftTrayOpen "左のトレイを開く"
+  MainForm actImport "読みこみ..." "" 
+  MainForm actViewUndo "視点元に戻す" "" 
+  MainForm actViewRedo "視点やり直し" "" 
+  MainForm actViewCenter "ここを表示の中心にする" "" 
+  MainForm actViewManipulator "マニピュレータを表示"
+  MainForm actViewLocalManipulator "ローカルマニピュレータを表示"
+  MainForm actViewReferplane "参照面を視覚化"
+  MainForm actSelectUnMirror "選択要素の対称図形を解除" "" 
+  MainForm actSelectFreezMirror "選択要素の対称図形を半固定" "" 
+  MainForm actSelectAll "全て選択" "" 
+  MainForm actUnSelect "選択解除" "" 
+  MainForm actSelectToTemp "選択部分を仮選択状態にする" ""
+  MainForm actTempToSelect "仮選択部分を選択状態に戻す" ""
+  MainForm actMarking "制御ラインの先頭点を選択" ""
+  MainForm actSelectDopelEdge "多重エッジを選択" "" 
+  MainForm actSelectSingleEdge "単独エッジを選択" "" 
+  MainForm actSelect2TrigonEdge "２つの三角面の共有エッジを選択" "" 
+  MainForm actSelectPopup "選択"
+  MainForm actSelectObjectConnection "接続要素を全て選択"
+  MainForm actSelectEdgeRing "エッジの連続選択"
+  MainForm actSelectPolyRing "面の連続選択"
+  
+  MainForm actImgHalftone "低コントラスト表示" "" 
+  MainForm actImgSizeAndPos "テンプレートサイズと位置の変更..." "" 
+  MainForm actVertexColision "頂点衝突感知-変形" "" 
+  MainForm actVertexColisionMove "頂点衝突感知-移動" "" 
+  MainForm actVertexColisionMoveOffset "オフセット付き頂点衝突感知-移動" "" 
+  MainForm actVertexColisionOffset "オフセット付き頂点衝突感知-変形" "" 
+  MainForm actDockInit "ドッキング状態初期化" "" 
+  MainForm actExport "書き出し..." "" 
+  MainForm actPrimSphere "球体..." "" 
+  MainForm actPrimSquare "立方体..." "" 
+  MainForm actPrimCylinder "円柱..." "" 
+  MainForm actPrimCorn "円錐..." "" 
+  MainForm actPrimDonut "円環..." "" 
+  MainForm actPrimPlane "平面..." "" 
+  MainForm actTestRender "テストレンダリング(POV)..." "" 
+  MainForm actTestRenderRRT "テストレンダリング(RRT2)..." "" 
+  MainForm actExit "終了" "" 
+  MainForm actNew "新規ドキュメント作成" "" 
+  MainForm actWindowTile "横に並べて表示" "" 
+  MainForm actWindowTile2 "縦に並べて表示" "" 
+  MainForm actWindowMax "最大化" "" 
+  MainForm actHelpContents "目次..." "" 
+  MainForm actHelpTurtorial "チュートリアル..." "" 
+  MainForm actHelpInstall "インストール..." "" 
+  MainForm actHelpUnInstall "アンインストール..." "" 
+  MainForm actHelpRegist "ユーザー登録..." "" 
+  MainForm actHelpAbout "MarbleCLAYについて..." "" 
+  MainForm actAboutPlugin "プラグインについて..." "" 
+  MainForm actEditMove "移動" "移動ツール|移動ツール Lクリック 選択 / Ｌドラッグ 移動 / 何もないところでドラッグ 範囲選択" 
+  MainForm actEditPencil "鉛筆 " "鉛筆" 
+  MainForm actEditPolygn "面作成/UV溶接" "面作成/UV溶接" 
+  MainForm actEditAddPoint "頂点追加" "" 
+  MainForm actEditPolyline "折れ線" "折れ線描画" 
+  MainForm actEditKnife "カット" "カットツール" 
+  MainForm actEditPush "押しだし" "押しだし" 
+  MainForm actExtrudePara "平行押しだし" "平行押しだし" 
+  MainForm actExtrudeKeepRev "裏面を残して押しだし" "裏面を残して押しだし" 
+  MainForm actExtrudeBevel "ベベル押しだし" "ベベル押しだし" 
+  MainForm actExtrudeMove "移動押しだし" "移動押しだし" 
+  MainForm actExtrudeSnap "スナップ押しだし" "スナップ押しだし" 
+  MainForm actExtrudeEdgeBevel "ベベルエッジ" "ベベルエッジ" 
+  MainForm actEditRoll2D "２D回転" "２D回転" 
+  MainForm actViewZoomRect "矩形領域拡大" "矩形領域の拡大" 
+  MainForm actViewhand "表示領域変更" "表示領域変更" 
+  MainForm actViewZoom "視点ズーム" "カメラのズームイン・アウト" 
+  MainForm actViewMove "視点変更" "カメラの移動" 
+  MainForm actLightMove "ライト変更" "ライトの移動" 
+  MainForm actEditScale "拡大縮小 " "拡大縮小ツール" 
+  MainForm actEditFree "フリーハンド折れ線 " "フリーハンド折れ線描画" 
+  MainForm actEditSmartGuide "スマートガイドライン " "スマートガイドライン描画" 
+  MainForm actEditSplit "分割 " "面・辺の分割" 
+  MainForm actEditClay "クレイツール" "クレイツール" 
+  MainForm actZoomIn "拡大 " "" 
+  MainForm actZoomOut "縮小" "" 
+  MainForm actLeftALT "actLeftALT" "" 
+  MainForm actLeftALTSHIFT "actLeftALTSHIFT" "" 
+  MainForm actLeftALTCTRL "actLeftALTCTRL" "" 
+  MainForm actLeftCTRLSHIFT "actLeftCTRLSHIFT" "" 
+  MainForm actLeftSPACE "actLeftSPACE" "" 
+  MainForm actRightDragAuto "自動"
+  MainForm actWorkXY "作業面：XY平面" "XY平面を作業面にする " 
+  MainForm actWorkYZ "作業面：YZ平面" "YZ平面を作業面にする " 
+  MainForm actWorkXZ "作業面：XZ平面" "XZ平面を作業面にする " 
+  MainForm actWorkScreen "作業面：投影面に平行" "投影面に平行な面を作業面にする " 
+  MainForm actWorkPoly "作業面：選択ポリゴンに平行" "選択ポリゴンに平行な面を作業面にする " 
+  MainForm actWorkGyakkou "補正付き頂点移動(逆光アルゴリズム)" "補正付き頂点移動(逆光アルゴリズム)" 
+  MainForm actWorkView "actWorkView" "" 
+  MainForm actWorkEdit "actWorkEdit" "" 
+  MainForm actXZFlip "逆方向から表示(XZ)" "" 
+  MainForm actYZFlip "逆方向から表示(YZ)" "" 
+  MainForm actXYFlip "逆方向から表示(XY)" "" 
+  MainForm actXY_pers "XYビュー <-> パースビュー" "" 
+  MainForm actYZ_pers "YZビュー <-> パースビュー" "" 
+  MainForm actXZ_pers "XZビュー <-> パースビュー" "" 
+  MainForm actTool "ツール" "" 
+  MainForm actSelTool "選択ツール" "" 
+  MainForm actWorkplane "作業面" "" 
+  MainForm actPrimitive "プリミティブ作成" "" 
+  MainForm actEffect "エフェクトフィルター" "" 
+  MainForm actCollision "衝突検知" "" 
+  MainForm actDivide "分割加工" "" 
+  MainForm actPlugin "プラグイン加工" ""
+  
+  MainForm actSmartGuidelineSubMenu "スマートガイドライン" ""
+  MainForm actSmartGuideMirror "スマートガイドライン(断面)のミラーコピー" ""
+  
+  MainForm actPreviewMode "プレビュースタイル" "" 
+  MainForm actReverse "面の表裏判定" "" 
+  MainForm actChangeSurf "図面切り換え" "" 
+  MainForm actViewPosition "視点切り換え" "" 
+  MainForm actWorkSpaceChange "ワークスペース変更" "" 
+  MainForm actDockingSite "ドッキングサイト追加" "" 
+  MainForm actEnglish "英語モード(English)" "" 
+  MainForm actWindowWindow "ウインドウ表示" "" 
+  MainForm actWindowToolbars "ツールバー表示" "" 
+  MainForm actToolBarUnDock "ドッキング解除" "" 
+  MainForm actDockTop "上側"
+  MainForm actDockBottom "下側"
+  MainForm actDockLeft "左側"
+  MainForm actDockRight "右側"
+  MainForm actSmallToolIcon "アイコンサイズ切り替え"
+  MainForm actToolbarClose "閉じる" "" 
+  MainForm actPreference "環境設定..."
+  MainForm actPrefWizard "GUI設定ウィザード..."
+  MainForm actFinGenerate "ひれを立てる"
+  
+  MainForm actGroup "グループ化"
+  MainForm actGroupUnGroup "グループ解除"
+  MainForm actGroupFusion "合成"
+  MainForm actGroupInvisible "表示/非表示"
+  MainForm actGroupRename "名称変更"
+
+  MainForm actImportParts "パーツを追加"
+  MainForm actFreezeParts "パーツ/ボーン変形を実体化する"
+
+  MainForm actFreezeSelectedParts "このパーツを実体化する"
+  MainForm actEnterParts "このパーツを編集する"
+  MainForm actEditExtAttribute "オブジェクト追加情報..."
+  MainForm actEditMatAttribute "マテリアル追加情報..."
+  MainForm actDeleteMaterial "マテリアルの削除"
+  
+  MainForm actMatDuplicate "マテリアルの複製を作る"
+  MainForm actMatCopy "マテリアルのコピー"
+  MainForm actMatPaste "マテリアルのペースト"
+
+  MainForm actPartsToWorkPlane "パーツ/ボーンを作業面に移動"
+  MainForm actParsMirror "対称パーツ/ボーンを作成"
+  MainForm actAttachBoneSimple "ボーンを適用(簡易)"
+  MainForm actDetachBoneSimple "ボーンを解除(簡易)"
+  MainForm actSkinmode "ボーンをアクティブ化"
+  MainForm actDeactivateSkinMode "ボーンを非アクティブ化"
+  MainForm actAttachBone  "ボーンに頂点を割り当て"
+  MainForm actDetachBone  "ボーンから頂点を削除"
+  MainForm actPartsResetPosition  "パーツ/ボーン位置をリセット"
+  
+  frmToolOptionTemplate tabMove "移動" "" 
+  frmToolOptionTemplate GroupBox1 "　スムースベンド(曲げ)" "" 
+  frmToolOptionTemplate cbxSmoothBend "自動" "" 
+  frmToolOptionTemplate cbxSmoothBendAndScaling "スケール変換" "" 
+  frmToolOptionTemplate tabPencil "ペン" "" 
+  frmToolOptionTemplate ToolBar1 "ToolBar1" "" 
+
+  frmToolOptionTemplate tabFace "面生成/UV溶接" "" 
+  frmToolOptionTemplate rgpFaceMode "自動面張り" "" "完全に自動 |ユーザーが明示 |"
+  MainForm actFacetTriangle "３角形部分に面を張る" "" 
+  MainForm actFacetSquare "４角形部分に面を張る" "" 
+  MainForm actFacetDragAndWeld "ドラッグ&ウェルド有効" "" 
+  MainForm actFacetPointOnEdge "エッジに頂点追加" "" 
+  MainForm actFacetAutoSplit "面の自動分割" "" 
+  MainForm actFacetDragCont "D&W時,線引きを継続" "" 
+  MainForm actFacetLineCont "線引きを継続" "" 
+  MainForm actFacetSnapOnFace "面にスナップ" "" 
+
+  frmToolOptionTemplate tabPolyline "折れ線" "" 
+  MainForm actLinePointOnEdge "エッジに頂点追加" "" 
+  MainForm actLineAutoSplit "面の自動分割" "" 
+  MainForm actLineDragAndWeld "ドラッグ&ウェルド有効" "" 
+  MainForm actLineDragCont "D&W時,線引きを継続" "" 
+  
+  MainForm actScaleRotReset "中心点をリセット" ""
+  MainForm actObjwinHighlight "オブジェクト/メッシュをハイライト"
+  MainForm actObjwinShowLabel "ポインター付近にラベルを表示"
+
+  frmToolOptionTemplate tabAddPoint "頂点の追加" "" 
+  frmToolOptionTemplate cbxAutoSplit3 "面の自動分割" "" 
+  frmToolOptionTemplate rgpDelPoint "頂点削除" "" "右クリックで削除 |Ctrl+左クリックで削除 |トグル削除 |"
+  frmToolOptionTemplate cbxAddSegment "セグメント追加" "" 
+  frmToolOptionTemplate tabClay "クレイツール" "" 
+  frmToolOptionTemplate Label1 "強さ" "" 
+  frmToolOptionTemplate GroupBox2 "　スムースベンド(曲げ)" "" 
+  frmToolOptionTemplate cbxSmoothBend2 "自動" "" 
+  frmToolOptionTemplate cbxSmoothBendAndScaling2 "スケール変換" "" 
+  frmToolOptionTemplate tabPush "押し出しツール" "" 
+  frmToolOptionTemplate rgpPushType "タイプ" "" "平行 |裏面を残す|べベル |移動 |スナップ|ベベルエッジ"
+  frmToolOptionTemplate cbxEdgeVertexExtrude "エッジ、頂点の移動押しだし" ""
+  frmToolOptionTemplate tabRoll "2D回転" "" 
+  frmToolOptionTemplate tabScale "拡大縮小" "" 
+  frmToolOptionTemplate tabCut "カットツール" "" 
+  frmToolOptionTemplate Label5 "No option..." "" 
+  frmToolOptionTemplate tabFreeHand "フリーハンド折れ線" "" 
+  frmToolOptionTemplate Label2 "No option..." "" 
+
+  frmSelectTool tabPaint "連続選択" "" 
+  frmSelectTool Label2 "強さ" "" 
+  
+  frmSelectTool tabRelation "マグネット選択" "" 
+  frmSelectTool Label1 "範囲" "" 
+  frmSelectTool gbxMagnet "形状" "" 
+  frmSelectTool Label3 "回り込み" "" 
+  frmSelectTool Label4 "%" "" 
+  frmSelectTool cbxFix "修正" "" 
+  frmSelectTool cbxNoConnect "非接続点も選択" "" 
+  frmSelectTool cbxConnectCount "接続数で選択" "" 
+  frmSelectTool tabPointSel "通常選択" "" 
+  frmSelectTool rgpRectSelectModeNormal "何もない場所をドラッグ" "" "範囲選択：メニュー |範囲選択：全て(フィルター無視) |範囲選択：フィルター |範囲選択しない |投げ縄：メニュー|投げ縄：全て(フィルター無視)|投げ縄：フィルター"
+  frmSelectTool tabFreeHand "投げ縄選択" "" 
+  frmSelectTool Label5 "No option..." "" 
+  frmSelectTool tabRect "範囲選択" "" 
+  frmSelectTool rgpRectSelectMode "選択モード" "" "メニュー表示 |全て選択(フィルター無視) |フィルター選択 |"
+  frmSelectTool cbxCanDragMove "ドラッグで移動可" "" 
+  frmSelectTool rgpLassoSelectMode "選択モード" "" "メニュー表示 |全て選択(フィルター無視) |フィルター選択 |"
+  
+  frmPrefControl1 Label25 "パースビューの操作" "" 
+  frmPrefControl1 Label22 "3面図の操作" "" 
+  frmPrefControl1 rgpZoom "Zoom In/Out" "" "上方向にドラッグでズームイン |下方向にドラッグでズームイン |"
+  frmPrefControl1 rgpView "View control" "" "ドラッグ方向と逆方向に視点を移動 |ドラッグ方向と同じ方向に視点を移動 |"
+
+
+  frmPrefShortcut btnShortCutSave "名前をつけて保存..." ""
+  frmPrefShortcut btnShortCutOpen "読みこみ..." ""
+  frmPrefShortcut btnShortCutDefault "標準に戻す" ""
+  frmPrefShortcut lblConflictShortCut "ショートカットキーに重複があります."
+  
+  frmprefGrid Label38 "グリッド間隔" "" 
+  frmprefGrid Label39 "区切り" "" 
+
+  frmEnviron tcrEnviron "tab" "" "表示色|テンプレート|OpenGL|ソフトウェア描画|表示1|表示2|操作1|操作2|ショートカット|グリッド初期値|保存|ホイール・中ボタン|コピー&ペースト|SmartScroll|テストレンダリング|カーソルキー|その他"
+  frmEnviron cbx3surfNotViewMirror "対称図形を表示しない" "" 
+  frmEnviron cbx3surfNotViewSpline "曲面を表示しない(OpenGL時)" "" 
+  frmEnviron tabPreviewOther "表示 その他" "" 
+  frmEnviron cbxGridSnap "グリッド吸着" "" 
+  frmEnviron Button2 "OK" "" 
+  frmEnviron Button3 "CANCEL" "" 
+  frmEnviron cbxHalfFrameNoShade "垂直解像度1/2" "" 
+  frmEnviron cbxHalfXFrameNoShade "水平解像度1/2" "" 
+  frmEnviron cbxHalfFrame "垂直解像度1/2" "" 
+  frmEnviron cbxHalfXFrame "水平解像度1/2" "" 
+  frmEnviron cbxHalfFlatFrame "垂直解像度1/2" "" 
+  frmEnviron cbxHalfXFlatFrame "水平解像度1/2" "" 
+  frmEnviron cbxHalfFlat "垂直解像度1/2" "" 
+  frmEnviron cbxHalfXFlat "水平解像度1/2" "" 
+  frmEnviron cbxDarkUnSelected "非選択メッシュを暗色表示" "" 
+  frmEnviron cbxTranslateUnSelected "非選択メッシュを半透明表示" "" 
+  frmEnviron cbxPolyViewVertex "頂点を常に表示" "" 
+  frmEnviron cbxPolyRollOver "頂点のロールオーバー表示を行う" "" 
+  frmEnviron cbxSplineViewVertex "頂点を常に表示" "" 
+  frmEnviron cbxSplineRollOver "頂点のロールオーバー表示を行う" "" 
+  frmEnviron cbxTexShade "テクスチャプレビュー時のシェーディング" "" 
+  frmEnviron cbxNewWindow "新規ウインドウを最大化して開く" "" 
+  frmEnviron cbxAutoMenu "ウインドウ類(オブジェクトウインドウ等)を自動的に開く" "" 
+  frmEnviron cbxMonitorRes "システムリソース残量を監視する" "" 
+  frmEnviron cbxPersQuickArea "画面縁側の操作領域を有効にする" "" 
+  frmEnviron cbxSurfQuickArea "画面縁側の操作領域を有効にする" "" 
+  frmEnviron cbxAutoSave "自動保存を行う" "" 
+  frmEnviron cbxGeneration "世代管理を行う" "" 
+  frmEnviron cbxSavePreview "プレビューを保存する" "" 
+  frmEnviron cbxSyncZoom "3面図の拡大・縮小を同期させる" "" 
+  frmEnviron cbxSyncPersCenter "注視点を同期させる" "" 
+  frmEnviron cbxAutoSurfChange "自動的に選択図面を切りかえる" "" 
+  frmEnviron cbxSyncCenterByObjwin "オブジェクトウインドウによる中心点の変更時、全ての図面を同期させる" "" 
+  frmEnviron cbxActiveUpdateOpenGL "OpenGLビューの即時更新"
+  frmEnviron cbxOpenGLOverwriteActiveWire "選択エッジの上書き表示"
+  frmEnviron cbxSwitchOpenGLEachView "各ビュー毎にOpenGL/Software描画を切り替える"
+  frmEnviron cbbTextureSize
+  frmEnviron cbxMakeSubMesh "独立した面、線を作る場合に、サブメッシュを作成する。" "" 
+  frmEnviron cbxTestRender "MegaPov/POV-Rayでテストレンダリングを行う" "" 
+  frmEnviron cbxTestRenderRRT "Redqueen2でテストレンダリングを行う" "" 
+  frmEnviron cbxSelectRevPolyOn3UVview "UVD(三面図)では常に裏面も選択可能"
+  
+  frmPrefColor Label3 "X軸" "" 
+  frmPrefColor Label4 "Ｙ軸" "" 
+  frmPrefColor Label5 "Ｚ軸" "" 
+  frmPrefColor ESVLabel2 "マニピュレータ ロールオーバー時" "" 
+  frmPrefColor Label29 "XY平面の色" "" 
+  frmPrefColor Label30 "XZ平面の色" "" 
+  frmPrefColor Label31 "YZ平面の色" "" 
+  frmPrefColor Label7 "選択色" "" 
+  frmPrefColor Label23 "ロールオーバー時" "" 
+  frmPrefColor Label24 "非編集対象メッシュ" "" 
+  frmPrefColor GroupBox1 "プレビューウインドウの色設定" "" 
+  frmPrefColor Label2 "背景色" "" 
+  frmPrefColor Label6 "メッシュの色" "" 
+  frmPrefColor GroupBox2 "UVウインドウの色設定" "" 
+  frmPrefColor Label19 "UVメッシュ色" "" 
+  frmPrefColor Label20 "テンプレート背景" "" 
+  frmPrefColor GroupBox3 "3面図" "" 
+  frmPrefColor Label18 "背景色" "" 
+  frmPrefColor Label21 "編集対象メッシュ" "" 
+  frmPrefColor Label8 "デフォルトのマテリアルカラー" "" 
+  frmPrefColor ESVLabel1 "仮選択" "" 
+  
+
+
+  frmPrefCOntrol2 Label10 "クリックとみなす範囲" "" 
+  frmPrefCOntrol2 Label11 "pixels" "" 
+  frmPrefCOntrol2 Label1 "頂点選択とみなす範囲" "" 
+  frmPrefCOntrol2 Label2 "pixels" "" 
+  frmPrefCOntrol2 Label3 "エッジ選択とみなす範囲" "" 
+
+  frmPrefTemplate Label1 "起動ペイントソフト" "" 
+  frmPrefTemplate Label16 "初期サイズ" "" 
+  frmPrefTemplate Label17 "X" "" 
+  frmPrefTemplate Button1 "参照..." "" 
+  frmPrefTemplate rgpDataExchange "ペイントソフトとのデータ交換" "" "クリップボード経由(標準) |ファイル経由(別マシンとのデータ交換時等に使用する) |"
+  frmPrefTemplate gbxFileExchange "ファイル経由 設定" "" 
+  frmPrefTemplate StaticText1 "ファイル名" "" 
+  frmPrefTemplate Button4 "参照..." "" 
+  frmPrefTemplate StaticText2 "チェック間隔" "" 
+  frmPrefTemplate StaticText3 "m秒毎" "" 
+  
+  frmPrefOther Label50 "ウインドウを開くまでの時間" "" 
+  frmPrefOther Label12 "UNDOの回数" "" 
+  frmPrefOther Label51 "msec" "" 
+  frmPrefOther rgpFileOpen "ファイル ダイアログボックス" "" "最後に開いたディレクトリを記録する |常に以下のディレクトリを開く |"
+
+  frmPrefPreview Label14 "逐次表示$デバッグ用。通常は選択しないで下さい）" "" 
+
+  frmPrefPreview ESVTabControl1 "" "" "ワイヤーフレーム1|ワイヤーフレーム2|シェーディング1|シェーディング2"
+  frmPrefPreview rgpFrameNoShade "稜線" "" "逐次表示 |一括表示256色 |一括65536色 |一括32000色 |"
+  frmPrefPreview rgpFrame "陰影付き稜線" "" "逐次表示 |一括表示256色 |一括65536色 |一括32000色 |"
+  frmPrefPreview rgpFlatFrame "隠面消去＋稜線" "" "逐次表示 |一括表示256色 |一括65536色 |一括32000色 |"
+  frmPrefPreview cbxFlatFrameZsort "Zソート" "" 
+  frmPrefPreview rgpFlat "隠面消去" "" "逐次表示 |一括表示256色 |一括65536色 |一括32000色 |"
+  frmPrefPreview cbxFlatZsort "Zソート" "" 
+  frmPrefPreview GroupBox6 "非選択オブジェクト" "" 
+
+  frmPrefPreviewOther Label13 "メッシュ描画" "" 
+  frmPrefPreviewOther Label36 "半確定稜線描画" "" 
+  frmPrefPreviewOther Label35 "単独線描画" "" 
+  frmPrefPreviewOther Label34 "制御ネット(ワイヤー表示時)" "" 
+  frmPrefPreviewOther Label38 "制御ネット(シェーディング表示時)" "" 
+  frmPrefPreviewOther Label37 "曲面描画" "" 
+  frmPrefPreviewOther GroupBox5 "曲面表示" "" 
+  frmPrefPreviewOther GroupBox1 "ライン表示" "" 
+  frmPrefPreviewOther Label8 "ワイヤー表示時の分割数" "" 
+  frmPrefPreviewOther Label9 "シェーディング表示時の分割数" "" 
+  frmPrefPreviewOther Label1 "頂点の表示サイズ" "" 
+
+  frmPrefWheel Label43 "中ボタンとホイールに割り当てた機能は$ マウス右ボタンを押しながら$実行すると機能が反転します" "" 
+  
+  frmPrefWheel rgpMiddleButton "中ボタン" "" "パースビュー：視点変更   ３面図：注視点移動 |パースビュー/３面図：注視点移動 |キーエミュレーション |"
+  frmPrefWheel rgpWheelMode "ホイール" "" "ホイールコマンド |ホイールズーム |ビューロール"
+  frmPrefWheel rgpWheelRMode "ホイール+右ボタン" "" "ホイールコマンド |ホイールズーム |ビューロール"
+  frmPrefWheel rgpWheel "ホイールズーム" "" "上：ズームアウト  下：ズームイン |上：ズームイン     下：ズームアウト |"
+  
+  frmPrefCopyPaste GroupBox7 "ペースト位置" "" 
+  frmPrefCopyPaste Label46 "だけ、ずらした位置にペーストする" "" 
+  frmPrefCopyPaste Label45 "元の位置から、" "" 
+  frmPrefCopyPaste Label44 "X" "" 
+  frmPrefCopyPaste Label47 "Y" "" 
+  frmPrefCopyPaste Label48 "Z" "" 
+
+  frmPrefTestRender Label1 "曲面の分割数" "" 
+  frmPrefTestRender Label3 "EXEの位置"
+  frmPrefTestRender Label4 "バージョン" 
+  frmPrefTestRender Label5 "EXEの位置"
+  frmPrefTestRender edtDetail "4" "" 
+
+  frmPrefSave Label40 "自動保存の間隔" "" 
+  frmPrefSave Label41 "分" "" 
+  frmPrefSave Label42 "世代前までを保存する" "" 
+  
+  frmPrefSmartScroll GroupBox1 "スクロールボール"
+  frmPrefSmartScroll RadioGroup1 "動作" "" "ズーム|ホイールコマンド"
+  frmPrefSmartScroll GroupBox2 "ズームホイール"
+  frmPrefSmartScroll Label1 "SmartScrollは(株)WACOMの商標です。SmartScroll用MarbleCLAYプラグインは$MarbleCLAYのインストールフォルダに同梱されています。使用する際は$MarbleCLAY.sspをSmartScrollウインドウにドロップしてください。"
+
+;追加
+  MainForm actViewCenterSelected "選択要素を表示の中心にする" "" 
+  MainForm actViewHideAxis "座標軸/グリッドを隠す"
+
+  frmEnviron Caption "環境設定"
+  dlgPrimSquare cbxEdgeSharp "エッジを鋭く"
+  dlgPrimSquare cbxVertexSharp "頂点を鋭く"
+  
+  frmPrefColor Label1 鋭いエッジ "" 
+  frmEnviron cbxEnabledMegaPOVexp "MegaPOV(*.pov)フォーマットで書き出しを行う" "" 
+  frmEnviron cbxTestRenderReso "解像度を指定する" "" 
+
+  frmModel tab4Surface "4面図" "" 
+  frmModel tabUV "UVD操作" "" 
+  frmModel tabUVPaint "UV+パース(ペイント用)" "" 
+  frmModel tabCustom "Custom" "" 
+  frmModel SpeedButton2 "" "ビューの最大化" 
+  frmModel SpeedButton1 "" "ビューの最大化" 
+  frmModel SpeedButton3 "" "ビューの最大化" 
+  frmModel SpeedButton4 "" "ビューの最大化" 
+ 
+
+  frmProperty rgpPosition "位置情報" "" 
+  frmProperty ESVLabel1 "位置"
+  frmProperty ESVLabel2 "サイズ"
+  frmProperty ESVLabel3 "回転"
+  frmProperty btnApply "適用" "" 
+  frmProperty btnCancel "CANCEL" "" 
+
+  dlgColisionOffset Caption "オフセット"
+  dlgColisionOffset Label1 "オフセット"
+
+  MainForm actPickMaterial "選択面のマテリアルを拾う"
+  MainForm actSelectSameMaterial "選択面に連続した同じマテリアルの面を選択する"
+  MainForm actSelectMaterial "現在のマテリアルと同じマテリアルを持つ面を選択する"
+  MainForm actMakePolyAll "全てのエッジに面を張る"
+  MainForm actMakePolySel "選択エッジに面を張る"
+  MainForm actWorkAuto "作業面：自動" "" 
+
+  MainForm actContinue "続行"
+  MainForm actPolySeparate "面を分離する"
+  MainForm actPolyTriangle "面を三角分割"
+  
+  dlgPrimSphere Label1 "分割" "" 
+  dlgPrimSphere Label2 "Z" "" 
+  dlgPrimSphere Label3 "R" "" 
+  dlgPrimSphere Label4 "位置" "" 
+  dlgPrimSphere Label5 "X" "" 
+  dlgPrimSphere Label6 "Y" "" 
+  dlgPrimSphere Label7 "Z" "" 
+  dlgPrimSphere Label8 "サイズ Size" "" 
+  dlgPrimSphere Label10 "R" "" 
+  dlgPrimSphere Button1 "OK" "" 
+  dlgPrimSphere Button2 "CANCEL" "" 
+  dlgPrimSphere cbxTriangle "3角分割" "" 
+
+  dlgPrimSquare Label1 "分割 Tessellation" "" 
+  dlgPrimSquare Label2 "Z" "" 
+  dlgPrimSquare Label3 "Y" "" 
+  dlgPrimSquare Label4 "位置 Position" "" 
+  dlgPrimSquare Label5 "X" "" 
+  dlgPrimSquare Label6 "Y" "" 
+  dlgPrimSquare Label7 "Z" "" 
+  dlgPrimSquare Label8 "サイズ Size" "" 
+  dlgPrimSquare Label9 "X" "" 
+  dlgPrimSquare Label10 "X" "" 
+  dlgPrimSquare Label11 "Y" "" 
+  dlgPrimSquare Label12 "Z" "" 
+  dlgPrimSquare Button1 "OK" "" 
+  dlgPrimSquare Button2 "CANCEL" "" 
+
+  dlgTempSizePos Label1 "位置" "" 
+  dlgTempSizePos Label2 "サイズ" "" 
+  dlgTempSizePos labX "X" "" 
+  dlgTempSizePos labY "Y" "" 
+  dlgTempSizePos labXs "X" "" 
+  dlgTempSizePos labYs "Y" "" 
+  dlgTempSizePos Label3 "X" "" 
+  dlgTempSizePos Label4 "Y" "" 
+  dlgTempSizePos Label5 "解像度" "" 
+  dlgTempSizePos Button1 "OK" "" 
+  dlgTempSizePos Button2 "CANCEL" "" 
+
+  dlgUVTemplate Label3 "X" "" 
+  dlgUVTemplate Label4 "Y" "" 
+  dlgUVTemplate Label5 "解像度" "" 
+  dlgUVTemplate cbxSelectedOnly "選択部だけ" "" 
+  dlgUVTemplate Button1 "OK" "" 
+  dlgUVTemplate Button2 "CANCEL" "" 
+
+  dlgUVMap Caption "UV割り当て"
+  dlgUVMap Button1 "OK" "" 
+  dlgUVMap Button2 "CANCEL" "" 
+  dlgUVMap ESVGroupBox1 "Preview" "" 
+  dlgUVMap ESVGroupBox2 "マッピング形状" "" 
+  dlgUVMap cbxKeepRatio "比率保持" "" 
+  dlgUVMap cbxUnfold "自動展開" "" 
+  dlgUVMap ESVRadioGroup1 "中心軸" "" "X軸|Y軸|Z軸"
+  dlgUVMap ESVGroupBox3 "中心位置" "" 
+  dlgUVMap lblX "X" "" 
+  dlgUVMap lblY "Y" "" 
+  dlgUVMap lblZ "Z" "" 
+  dlgUVMap ESVSpeedCheck2 "オブジェクト中心" "" 
+  dlgUVMap ESVSpeedCheck3 "指定" "" 
+
+  dlgDuplicate rgpType "形式" "" "その場で複製 |XZ平面に対称 |YZ平面に対称 |XY平面に対称 |作業面に対称 |"
+  dlgDuplicate cbxWeld "溶接" "" 
+  dlgDuplicate cbxInGroup "グループ内で複製" "" 
+  dlgDuplicate OKBtn "OK" "" 
+  dlgDuplicate CancelBtn "CANCEL" "" 
+
+  frmRegist lblUser "ユーザー名" "" 
+  frmRegist lblPassWord "パスワード" "" 
+  frmRegist Button1 "OK" "" 
+  frmRegist Button2 "CANCEL" "" 
+  frmRegist lblFreeVersion "完全フリー版です。登録の必要はありません"
+  frmRegist lblThankyou "βテストへのご協力ありがとうございました。"
+
+  dlgPushByFig Label1 "押し出す距離" "" 
+  dlgPushByFig Label2 "押し出し方向" "" 
+  dlgPushByFig rgpType "形式" "" "平行押しだし |裏面を残して押し出し|頂点の法線ベクトルに沿って押し出し |べベル押し出し |カスタム方向押し出し "
+  dlgPushByFig cbxNotErasePolygn "元の面を残す" "" 
+  dlgPushByFig OKBtn "OK" "" 
+  dlgPushByFig CancelBtn "CANCEL" "" 
+
+  dlgWeld Label1 "溶接する頂点の距離" "" 
+  dlgWeld Label2 "以内" "" 
+  dlgWeld cbxAllPoints "選択した頂点を全て溶接" "" 
+  dlgWeld OKBtn "OK" "" 
+  dlgWeld CancelBtn "CANCEL" "" 
+
+  dlgNaming Label1 "名前：" "" 
+  dlgNaming OKBtn "OK" "" 
+  dlgNaming CancelBtn "CANCEL" "" 
+  
+  dlgFreezeSpline Label1 "分割数"
+  dlgFreezeSpline OKBtn "OK" "" 
+  dlgFreezeSpline CancelBtn "CANCEL" "" 
+  
+  dlgGridSet Label1 "グリッド幅" "" 
+  dlgGridSet Label2 "区切り" "" 
+  dlgGridSet cbxGridSnap "吸着" "" 
+  dlgGridSet OKBtn "OK" "" 
+  dlgGridSet CancelBtn "CANCEL" "" 
+
+  dlgEdgeBevel ESVLabel1 "ベベル量" "" 
+  dlgEdgeBevel ESVButton1 "OK" "" 
+  dlgEdgeBevel ESVButton2 "CANCEL" "" 
+;--  
+  frmEnviron cbxDrawCrossPers "クロスライン表示(透視図)" "" 
+  frmEnviron cbxDrawCross3Way "クロスライン表示(3面図)" "" 
+  frmEnviron cbxDrawGridPers "作業面グリッド表示(透視図)" "" 
+  frmEnviron cbxDrawGrid3Way "作業面グリッド表示(3面図))" "" 
+  frmEnviron cbxDragOverScreen "スクリーン端を超えてドラッグする"
+  
+  MainForm actSplineWeightP "ウェイトを増加"
+  MainForm actSplineWeightM "ウェイトを減少"
+  
+  MainForm actHelp1Step "1ステップチュートリアル..."
+  MainForm actLathe "回転体..."
+
+  dlgLathe Caption "回転体" "" 
+  dlgLathe Label1 "分割数" "" 
+  dlgLathe cbxConnect "中心で接続する" "" 
+  dlgLathe Button1 "OK" "" 
+  dlgLathe Button2 "CANCEL" "" 
+
+  frmObjWindow pnlInfo "基本情報"
+  frmObjWindow btnNewObj "" "空のオブジェクトを作る" 
+  frmObjWindow SpeedButton3 "" "オブジェクトの下に空のサブメッシュを作る" 
+
+  MainForm actDeleteObject オブジェクト削除 "" 
+  MainForm actSelectInverse  "選択を反転" ""
+  
+  frmView Label1 "表裏"
+  frmView Label2 "曲面"
+
+  MainForm actStatusBarTop "上部にドッキング" ""
+  MainForm actStatusBarBottom "下部にドッキング" ""
+  MainForm actStatusBarClose "閉じる" ""
+  
+  MainForm actAlign "整列..." ""
+
+  MainForm actScriptMenu "スクリプト"
+  MainForm actScriptExecute "ファイルを指定して実行..."
+
+  MainForm actVectorCalc "ベクトル電卓" ""
+  
+  dlgAlign Caption "整列" "" 
+  dlgAlign rgpX "" "" "最小|最大|中間|指定値"
+  dlgAlign rgpY "" "" "最小|最大|中間|指定値"
+  dlgAlign rgpZ "" "" "最小|最大|中間|指定値"
+  
+  dlgAlign btnOK "OK" "" 
+  dlgAlign btnCANCEL "CANCEL" "" 
+
+  frmPrefNudge Label1 "パースビュー：Ctrlキーを押しながらカーソルを押すとZ方向のナッジ" "" 
+  frmPrefNudge Label2 "スペースを押すと10倍の距離" "" 
+  frmPrefNudge Label3 "ナッジの移動量" "" 
+  frmPrefNudge RadioGroup1 "カーソルキー" "" "ナッジ|視点変更"
+  frmPrefNudge RadioGroup2 "カーソル+Altキー" "" "ナッジ|視点変更"
+
+  frmPref3WayPreview gbx3Way "三面図"
+  frmPref3WayPreview gbxUnselected "非アクティブオブジェクト"
+  frmPref3WayPreview rgpViewMove "視線変更中の表示モード" "" "稜線プレビュー |陰影付き稜線プレビュー |表示モードの変更をしない |自動(描画速度に応じて変更) |"
+  
+  frmEnviron actWindowsStyle "Windows風スタイル"
+  frmEnviron actBaseColor "ベースカラー指定"
+  frmEnviron actLabelColor "ラベルカラー指定"
+  frmEnviron actLabelFontColor "ラベルフォントカラー指定"
+  frmEnviron actCheckBoxColor "チェックボックスカラー指定"
+  frmEnviron actActiveBarColor "アクティブ図面カラー指定"
+  frmEnviron actPanelColor "パネルカラー指定"
+  frmEnviron actButtonColor "ボタンカラー指定"
+  
+  frmEnviron actViewRollOnlyPers 常にパースビューの視点を変更する
+  frmEnviron actViewZoomOnlyPers 常にパースビューでズームを行う
+  frmEnviron actViewPanEnable 3面図での注視点変更を許可する
+  frmEnviron actViewRollAxisChange 回転軸を交換
+
+  
+;
+  frmImport cbxUVexport "UV値を出力"
+  frmImport cbxNVexport "法線ベクトルを出力"
+  frmImport cbxFlip "面を反転"
+  frmImport cbxAlwaysUse "この形式のファイルの場合、常にこの設定を使う"
+  frmImport ESVLabel1 "倍率"
+  frmImport ESVLabel2 "サイズ"
+  
+  frmMaterial Caption MATERIAL
+  frameMaterial lblImport 読み込み
+  frameMaterial lblUVTemplate UVテンプレート化
+  frameMaterial lblDetach 解除
+  frameMaterial StaticText1 選択されていません
+
+  frmCalc Caption V-CALC
+  frmLoope Caption Loupe
+;
+  frameMaterial ESVLabel1 VP
+  frameMaterial ESVLabel2 FP
+  
+  frmLogMessage Caption "Script/Message"
+  
+  dlgMoveToWorkplane cbxMoveToCurrent "現在の選択ビューに平行な面に移動" "" 
+  dlgMoveToWorkplane cbxMoveToPars "透視図面の作業面に移動" "" 
+  dlgMoveToWorkplane ESVButton1 "OK" "" 
+  dlgMoveToWorkplane ESVButton2 "CANCEL" "" 
+  
+  dlgFin Label1 "密度"
+  dlgFin Label2 "長さ"
+  dlgFin Label3 "幅"
+  dlgFin Label4 "セグメント"
+  dlgFin Label5 "乱れ"
+
+
+  dlgEnvWizard Caption "GUI設定ウィザード"
+  dlgEnvWizard btnBack "戻る"  
+  dlgEnvWizard btnNext "次へ"  
+  dlgEnvWizard btnFinish "完了"  
+  dlgEnvWizard btnCancel "キャンセル"  
+  
+  dlgEnvWizard lblToolBars "ツールバー"
+  dlgEnvWizard btnSimpleTools "最小限のツールボタン"
+  dlgEnvWizard btnComplexTools "標準のツールボタン"
+  
+  
+  dlgEnvWizard lblViewRollBase "視点の変更(基本)"
+  dlgEnvWizard lblViewRollBaseAltDrag "Altキーを押しながら左ボタンをドラッグする事で$視点の変更が可能です。$クイックツールを設定することで別のキーにも$割り当て可能です。"
+  dlgEnvWizard lblViewRollBaseQuickArea "作業エリアの周辺部を左ドラッグする事で$視点の変更が可能です"
+  dlgEnvWizard lblViewRollBaseNext "「次へ」をクリックしてください。$別の方法による視点変更を設定します。"
+  dlgEnvWizard lblViewRollCustom "視点の変更(カスタマイズ)"
+  dlgEnvWizard btnMidAndRight "マウスの中ボタンと右ボタンを同時に押してドラッグ"
+  dlgEnvWizard lblMidAndRight "利点：他の機能とバッティングしない /欠点：押しにくい"  
+  dlgEnvWizard btnMid "マウスの中ボタンだけを押してドラッグ"
+  dlgEnvWizard lblMid "利点：押しやすい /欠点：注視点変更がマウスだけで行いにくくなる"  
+  dlgEnvWizard btnRight "マウスの右ボタンだけを押してドラッグ(未完成)"
+  dlgEnvWizard lblRight "利点：押しやすい$欠点：マグネット範囲やウェイト操作がマウスだけで出来なくなる"  
+  dlgEnvWizard btnArvelBall "Arvelのトラックボール付きマウスのボールを使う"
+  dlgEnvWizard lblArvelBall "利点：操作しやすい$欠点：ズーム操作等がマウスだけで行いにくくなる"  
+  dlgEnvWizard btnSmartScroll "Wacomのスマートスクロールを使う"
+  dlgEnvWizard lblSmartScroll "他の方法と併用が可能です"  
+  
+  dlgEnvWizard lblSmartScrollTitle "スマートスクロール"
+  dlgEnvWizard lblSmartScrollHowto "SmartScrollは(株)WACOMの商標です。SmartScroll用MarbleCLAYプラグインは$MarbleCLAYのインストールフォルダに同梱されています。使用する際は$MarbleCLAY.sspをSmartScrollウインドウにドロップしてください。"
+
+  dlgEnvWizard lblZoomBase "ズーム(基本)"
+  dlgEnvWizard lblZoomBaseAltDrag "Altキーを押しながら右ボタンをドラッグする事で$ズーム値の変更が可能です。$クイックツールを設定することで別のキーにも$割り当て可能です。"
+  dlgEnvWizard lblZoomBaseQuickArea "作業エリアの周辺部を右ドラッグする事で$ズーム値の変更が可能です"
+  dlgEnvWizard lblZoomBaseNext "「次へ」をクリックしてください。$別の方法によるズームを設定します。"
+
+  dlgEnvWizard lblZoomCustom "ズーム(カスタマイズ)"
+  dlgEnvWizard btnZoomWheel "マウスホイールだけでズーム"
+  dlgEnvWizard lblZoomWheel "利点：操作しやすい /欠点：ホイールコマンドが使えない"
+  dlgEnvWizard btnZoomWheelCtrl "Ctrlキー、もしくは右ボタンを押しながらホイールを回してズーム"
+  dlgEnvWizard lblZoomWheelCtrl "利点：他の機能とバッティングしない /欠点：操作手順が増える"
+  dlgEnvWizard lblWheelZoomDisableReason "設定不可:Arvelマウスのボールに視点回転が割り当てられているため"
+  
+  dlgEnvWizard lblPanBase "注視点移動(基本)"
+  dlgEnvWizard lblPanBaseSpace "Spaceキーを押しながら左ボタンをドラッグする事で$視点の変更が可能です。$クイックツールを設定することで別のキーにも$割り当て可能です。"
+  dlgEnvWizard lblPanBaseNext "「次へ」をクリックしてください。$別の方法による注視点変更を設定します。"
+  
+  dlgEnvWizard lblPanCustom "注視点移動(カスタマイズ)"
+  dlgEnvWizard lblMiddlePan "中ボタンをドラッグする事で注視点の変更が可能です。"
+  dlgEnvWizard lblMidPanDisableReason "設定不可:中ボタンが別の機能に割り当てられている、$もしくはArvelマウスを使う設定のため"
+  dlgEnvWizard lblMidAndRightPan "中+右ボタンをドラッグする事で注視点の変更が可能です。"
+  dlgEnvWizard btnQuickAreaPan "クイックエリアに注視点移動を割り当てます。"
+  dlgEnvWizard lblQuickAreaPan  "欠点：クイックエリアで視点変更ができなくなります。"
+  dlgEnvWizard lblStart "GUI設定ウィザードにより、操作方法の設定を行います$「次へ」を押してください"
+  dlgEnvWizard lblFinish  "完了ボタンを押すと設定が反映されます$$より詳細な設定を行いたい場合は、Option->環境設定 を実行してください"
+  
+  frmMapBrowser btnLoad "読み込み"
+  frmMapBrowser btnPaste "ペースト"
+}
+
+Text {
+  restrOverWrite は既に存在します。$上書きしますか？
+  restrRegist 登録完了。$MCL形式での保存が出来るようになります
+  restrAlreadyRegist  登録済み
+  restrNotRegist  "オブジェクトのポリゴン数を "
+  restrNotRegist2 "以内にして、もう一度保存しなおしてください。$$登録前は複雑なオブジェクトをMCL形式で保存することができません。$$ユーザーさんの声を聞くために登録制にしていますが、登録は無料です。$詳しくはReadMe.txtもしくは作者のWebサイトでご確認ください。$"
+
+  resterNotSaftyEnd  前回の終了が異常だった可能性があります。$バックアップしたファイルを開きますか?$
+  restrDocChanged  このドキュメントは変更されています。保存しますか?$
+  restrDocReload  このドキュメントの変更内容は破棄されます。再読み込みを続けますか?$
+  restrTooMuchSelectPolygn  このコマンドは単一のポリゴンに対してのみ有効です$
+  restrNoSel  <None>
+  restrMulti  <Multi>
+  restrNotFigure  は数値ではありません
+  restrMeshDrop  テクスチャ中のメッシュラインを破棄しますか？$OKを押すと現在のテクスチャ情報が消去されます$
+  restrObject  オブジェクト
+  restr3MenRyosen には3つ以上の面を共有する$稜線がふくまれているため、RDS形式で保存できません
+  restrNotFacetLine  には面を構成しない線があります。$面を構成しない線を書き出しますか？
+  restrFile  ファイル
+  restrAlreadyOpenDocument "このドキュメントは既に開かれています"
+  restrNotSelectExportObj 書き出したいオブジェクトを選んでください
+  restrGroup グループ
+  restrNotMesh  このファイルにはメッシュ形状がふくまれていません。
+  restrRDSreadNow "Now open RDS..."
+  restrMCLreadNow "Now open MCL..."
+  restrVertex (頂点)
+  restrUV (テクスチャ座標)
+  restrEdge (稜線)
+  restrMap (画像)
+  restrFinish (終了処理中)
+  restrPolygon (ポリゴン)
+  restrNotRDS  RayDreamStudio形式のファイルではありません
+  restrInvalidFileType  形式のファイルではありません
+  restrUniverse  "ユニバース"
+  restrNotRok  ファイル形式の認識ができません。
+  restrNotDXF  "DXF fileではありません"
+  restrOBJreadNow "Now open OBJ..."
+  restrDXFreadNow "Now open DXF.."
+  restrInvalidShortCut  に登録されたショートカットは不正です
+  restrCannotMenuShortCut  メインメニューのショートカットにはALTキー以外のものは登録できません
+  restrCantDeleteEx  特殊削除できません！$特殊削除は単一の面・線・点に対してのみ実行可能です
+
+  restrMoveHere  (ここに移動)
+  restrMoveAndFusion  [移動と合成]
+  restrEmergency  90%以上のリソースが消費されているため、緊急終了します。
+  restrInvalidGrpOp  グルーピング操作は、単一のオブジェクトに対してのみ実行可能です
+  
+  restrInvalidColision "衝突検知は、単一オブジェクト内でのみ実行可能です"
+  
+  restrCantGroupingLocked "ロックされている要素が含まれているため、グループ操作できません"
+
+  restrInstall  "関連付けを行いました。 アンインストールで関連付けの解除が可能です。"
+  restrUnInstall  "レジストリをクリアしました。 完全にアンインストールするには、各自でファイル削除を行ってください "
+  restrUninstallAsk  "アンインストールすると、登録情報と関連付けがクリアされます。$続けてよろしいですか？"
+  restrNotInstalledMegaPOV "MegaPOVがインストールされていません。$MegaPOVについては関連サイト・書籍等で調べてください"
+  
+  restrCantMakeUV "複数のオブジェクトに対してUV割り当てを行うことはできません"
+  restrCantUVBurn "複数のオブジェクトに対してUV焼付けを行うことはできません"
+
+  restr0solid 実線
+  restr1Dash 点線1
+  restr2Dash 点線2
+  restr3Dash 点線3
+  restr4Dash 点線4
+  
+  restrPovVer0 "MegaPov"
+  restrPovVer1 "POV-Ray"
+  
+  restrUVcustom カスタム
+  restrUVBox ボックス
+  restrUVCylindrical 円柱
+  restrUVSphere 球
+  restrUVProj 視点投影
+  restrUVcantpreview "自動展開時プレビュー不可"
+  
+  restrUVcustomInfo "XYZ値を元にUV値を割り当てます。$後で編集する場合、この形状が適しています"
+  restrUVBoxInfo "箱状に投影します"
+  restrUVCylindricalInfo "円柱状に投影します"
+  restrUVSphereInfo "球状に投影します"
+
+  restrYes はい(&Y)
+  restrNo いいえ(&N)
+  restrCancel キャンセル(&C)
+  
+  restrAxis 軸
+
+  restrToolClickOpen "ツールクリックで開く"
+  restrAutoOpen "自動的に開く"
+  restrAutoClose "自動的に閉じる"
+  restrClose 閉じる
+  restrDockPin "クリック: 自動的に閉じる/開く$ドラッグ: 左右にドッキング"
+  restrUnDockPin "ドラッグ: ドッキング解除"
+  
+  restrWSdefault 標準
+  restrWS640 640x480
+  restrWS1280   1280x1024
+  restrWSsave "保存..."
+  restrWSload "読みこみ..."
+
+  
+  restrNoMoreAdd "選択されたメッシュはロックされているため、これ以上追加できません。ロックされていないメッシュを選択してください"
+  restrNoAdd "頂点の追加はできません" 
+  restrNoAddLock "頂点は別のメッシュに追加されます" 
+  restrNoAddLockObj "ロックオブジェクト" 
+  restrNoAddDeforming "変形中のオブジェクト" 
+  restrNoAddLockElem "ロック要素" 
+  restrNoAddHalfMirror "半固定ミラー" 
+  restrNoWeldLock "溶接せずに、スナップします"
+  
+  restrNotFoundFile "存在しないファイル名です"
+
+  restrCreateNewMesh "新しいメッシュを作りました..."
+  
+  restrDolly 視点移動
+  restrPan 中視点移動
+  restrZoom ズーム
+
+  restrMcl MarbleCLAY
+  restrCar Carrara
+  restrRds RayDreamStudio
+  restrDxf DXF[3DFACE]
+  restrObj Wavefront
+  restrRok 六角大王
+  restrPovRay POV-Ray
+  restr3DS "3D studio"
+  restrRRT "Redqueen"
+  restrYAF "YafRay(xml)"
+  restrLWO "Lightwave object"
+  
+  restrExportNV "法線ベクトルを出力"
+  restrExportMTL "mtlファイルを出力"
+  restrExportTri "三角形化して出力"
+  restrExportBackwardUV "UV値を面情報の後に出力"
+  restrExportLWO2 "LWO2形式で出力"
+  restrExportKeepImg "テクスチャ画像ファイルを保持"
+
+  restrImportUVWeld "近くのUV頂点を溶接する"
+  
+  
+  restrBadHistory " ヒストリー階層に異常があります。$この直前にどのような操作をしたかをわかる範囲で、開発者にレポートしてくださるようお願いします。"
+  restrCantLathe ２つ以上に分岐しているラインからは回転体は生成できません
+  restrErrorInfinityLoop "頂点リンクに異常があります。$この直前にどのような操作をしたかをわかる範囲で、開発者にレポートしてくださるようお願いします。"
+  restrMomoryRelease 記憶解除
+  restrNotSelectPolyline ラインを選択してください
+
+  restrNewItem 新規作成
+  restrChangeItem 変更
+  restrMapType マップ
+  restrValue1 値0～1
+  restrValue255 値0～255
+  restrVector4 配列[4]
+  restrColor3 カラー
+  restrAlias リンク
+  restrARBShader ARB Shader
+  restrMATSpider MATSpider
+
+  restrMat1 拡散光
+  restrMat2 拡散光マップ
+  restrMat3 ハイライト
+  restrMat4 ハイライトマップ
+  restrMat5 光沢
+  restrMat6 光沢マップ
+  restrMat7 環境光
+  restrMat8 環境光マップ
+  restrMat9 発光
+  restrMat10 発光マップ
+  restrMat11 不透明度
+  restrMat12 不透明度マップ
+  restrMat13 バンプ
+  restrMat14 バンプマップ
+  restrMat15 ディスプレイス
+  restrMat16 ディスプレイスマップ
+  restrMat17 反射
+  restrMat18 反射マップ
+  restrMat19 屈折
+  restrMat20 屈折マップ
+  restrMat21 透明度
+  restrMat22 透明度マップ
+  
+  restrEnvControl 操作
+  restrEnvControl1 視点(クイックエリア)
+  restrEnvControl2 視点(SmartScroll)
+  restrEnvMouse マウスホイール
+  restrEnvCursor カーソル
+  restrEnvCopyPaste コピー&ペースト
+  restrEnvControl3 操作オプション
+  restrEnvDisplay 表示
+  restrEnvOpenGL OpenGL
+  restrEnvSoft ソフトウェア描画
+  restrEnvColor 表示色
+  restrEnvDisplay1 表示オプション1
+  restrEnvDisplay2 表示オプション2
+  restrEnvOther その他
+  restrEnvSave 保存
+  restrEnvGrid グリッド初期値
+  restrEnvTestRender テストレンダリング
+  restrEnvTemplate テンプレート
+  restrEnvShortCut ショートカット
+  
+  restrObjectItemCopy "コピーします : "
+  restrObjectItemMove "移動します : "
+  restrObjectItemSwap "入れ替えます : "
+  restrObjectItemFusion "合成します : "
+  
+  restrCantDeleteActiveBone "アクティブなボーンに割り当てられているオブジェクトは削除できません"
+  restrConflictShortcut "ショートカットキーに重複があります。$環境設定ウインドウを閉じてもよろしいですか?"
+  
+  restrViewCtrlAdjust "特定角度にくっつく"
+  restrViewCtrlAdjustCtrl "Ctrlを押している時だけ作動"
+  restrViewCtrlLimit "上下回転に制限をかける"
+  restrViewCtrlOrtho "一時平行投影する"
+
+  restrInvalidSmartGuideLine_Mirror "スマートガイドライン(断面)のミラーコピーを実行する前にひとつのガイドライン(断面)を選んでください"
+  
+  restrCannotSave "保存できませんでした"
+
+  ELErrorMsg "ご迷惑をおかけします。MarbleCLAYに問題が発生しました"
+  ELRestart "再起動します"
+  ELTerminate "停止します"
+  ELPlease "お手数ですがこの問題についてのレポート送信をお願います"
+  ELDescription "エラーレポートは自動作成されます。このレポートに含まれる内容の秘密保持と匿名性の保持をお約束します"
+
+  ELDetails "レポートの詳細については、"
+  ELClickHere "ここをクリックしてください"
+  ELEMail "メイルアドレス(省略可)"
+
+  ELSendButton "送信"
+  ELDontSendButton "閉じる"
+
+  ELCheckSend "インターネット経由で送信"
+  ELCheckScreenShot "スクリーンショットを添付"
+  ELCheckCopyToClipboard "クリップボードにコピー"
+  ELSupport "サポートページ"
+
+  ELSendSend "送信"
+  ELSendMsg "メッセージ"
+  ELSendResolve "DNS解決中"
+  ELSendLogin "ログイン"
+  ELSendConnecting "サーバー接続中"
+  ELSendConnected "サーバーに接続しました"
+  ELSendSending "送信中"
+  ELSendSent "送信完了"
+  ELSendProject "プロジェクト選択"
+  ELSendSearching "検索中"
+  ELSendModifying "書き換え中"
+  ELSendDisconnecting "接続解除中"
+  ELSendDisconnected "接続解除しました"
+
+}

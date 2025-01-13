@@ -1,0 +1,9 @@
+begginers 
+
+install
+setup
+UI
+Workplanes/offsets
+Modeling basics
+freeze (bone/subd)
+Bone/position
