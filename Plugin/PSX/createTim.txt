@@ -1,0 +1,16 @@
+ 
+"createTim.bat" 
+C:\MarbleCLAY\Plugin\PSX
+8  640  0  640  256   "c:\marbleclay\temp\newobject\new0.tim"    256x256x8 
+ 
+img2tim v0.75 - Converts most image files into PlayStation TIM files
+2016 Meido-Tek Productions (Lameguy64/TheCodingBrony)
+Powered by FreeImage v3.16.0
+
+Input File  : tempimg.bmp
+Output File : c:\marbleclay\temp\newobject\new0.tim
+Output Bpp  : 8
+
+Converted successfully...
+
+FINISHED  

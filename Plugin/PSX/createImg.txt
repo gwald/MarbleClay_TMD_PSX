@@ -1,0 +1,6 @@
+ 
+"createImg.bat" 
+C:\MarbleCLAY\Plugin\PSX
+"c:\marbleclay\temp\newobject\new0.bmp"  Undefined  256  256  8   255    "c:\marbleclay\temp\newobject\new0.tim" 
+ 
+C:\MarbleCLAY\Plugin\PSX\convert.exe "c:\marbleclay\temp\newobject\new0.bmp" -verbose -colorspace Undefined  -auto-level -resize 256!x256! -type palette -depth 8   -colors 255  tempimg.bmp 
