@@ -64,3 +64,5 @@ To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-DOSBOX.BAT"
 6. Mkpsxiso for creating PSX ISO: https://github.com/Lameguy64/mkpsxiso
 7. Unix/Linux utility commands executables are from: https://gnuwin32.sourceforge.net/packages/coreutils.htm
 8. Yarexe for creating PlayStation executable: https://github.com/gwald/Yarexe
+
+Old files were originally posted here: https://united3dartists.com/forum/viewtopic.php?t=6424
