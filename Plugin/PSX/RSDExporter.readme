@@ -1,0 +1,221 @@
+RSD Export/Obj batch script (July 2024)
+July 2024 fixed pointer bug on textured quads
+v4.5 Fixed TIM auto VRAM location bug
+v4.0 more english translation, fixed TIM X,Y VRAM auto setting for multiple images, RSD lit/non-lit  colour correction, RSD Transparency
+v3.0 fixed exports with no material, added !quit batch command, which quits execution, now export whole image assigned to tri/quad (not UV mapped), reuse existing images from "select image" for RSDExports
+v2.2 added Obj export
+v2.1 random fixes
+v2.0 Run Batch tool plugin
+v1.0 RSD Export plugin
+About:
+
+This is a plugin for MarbleClay to export PS1's RSD 3D files and viewed in NO$PSX.
+MarbleClay is a small and simple, yet modern and powerful 3D modeller with simple skinning and posing for rendering images.
+
+
+Limitations:
+
+Unfortunately, MarbleClay has no support for per vertex colours, so Gouraud shading is not possible, a combination of flat colour, textured, textured with a flat colour, lit and unlit, and both triangle and quad faces are supported.
+The exporter only exports a single root object as a single RSD model, no groups are created. 
+If you need a multiple part model (ie body, arms, legs, head), make each individual part as a root object not a object group.
+
+If you need your model in a specific offset from the center, as above, it should be in the correct place required (not centered), before exporting.
+The exported RSD should be the same model, except that it is a mirror image or the MarbleClay model, along the MarbleClay X plane.
+
+Pre installed requirements for RSD exporting and viewing:
+
+The following must be install and in system path:
+
+convert and identify - resizes image and converts the bit width.
+ImageMagick from http://www.imagemagick.org version used:  
+Version: 6.8.7-10 Q16 i686 2016-12-24 
+
+img2tim - converts image to TIM format and sets the VRAM space.
+img2tim from https://github.com/Lameguy64/img2tim version used v0.75
+
+NO$PSX from http://problemkaputt.de/psx.htm version used 2.1
+
+Net Yaroze SDK (DOS/win32 apps)
+
+Everything (except MarbleClay) is set up in this VM: https://archive.org/details/net-yaroze-dev-winxp-vm-2022 (also used to build this plugin!)
+Windows 64bit requires for SDK to work (untested): http://www.columbia.edu/~em36/ntvdmx64.html
+Linux users: Recommended to use the windows VM or create your own.
+
+Not required in system path:
+
+MarbleClay from http://www.flat2d.com/MarbleClay.html version used beta5.8a
+This plugin only works if the rsdn.bat file is in either:
+C:\MarbleSDK (preferred)
+or
+C:\Program Files\MarbleClay
+
+Installation:
+
+Put RSDExporter.mcp and RSDN.BAT in the MarbleClay Plugin folder, ie:
+C:\MarbleSDK\Plugin
+or
+C:\Program Files\MarbleClay\Plugin
+
+The .lua files go in the Script folder.
+qtest.lua, a quick script to test quads (faces with 4 vertices) are on a single plane (Co-planar), if it finds a quad that's bad, it will remove it and exit, you will have to find it and replace it with 2 triangles.
+MarbleClay can convert the whole model to triangles, but you tried modelling in quad faces (ie only moving lines and faces, not vertices), this script will help.
+rsd.lua, was the first implementation, it's bad, it only supports textured models, due to the MarbleClay lua plugin isn't fully completed.
+The folder RSDExporter contains the source code and only useful for rebuilding, see RSD_Exporter.pas for more information.
+
+Usage:
+
+MarbleClay creates three shader setting sliders by defaults for materials, RGB values, specular and shininess, these are used in the exporter as the following:
+
+RGB: Colour values, defaults to white.
+Specular: Enables light calculations for the object's faces and normal map strength for OBJ.
+Shininess(RSD only): Enable the RGB colour with texture image (tint).
+Refraction (RSD only): Adjusts RGB values, for use with texure images (tint).
+Transparency (RSD only): Uses RGB sliders for RSD transparency values.
+
+
+
+
+ The packets for non-textured polys don't allow you to set the transparency rate. The
+easy way around this is to make all your polys textured, but referencing a pure white square (can be
+any size, say, 4x4 pixels) as a texture. This increases drawing time slightly though, since textured
+polys take slightly longer than non-textured.
+
+									
+If no texture is used, the exporter will default to the material's RGB (Diffuse) colour.
+If with textured or RGB, when Specular is over 0 it will enable lighting calculations.
+If material contains a texture, the RGB is only applied when Shininess is over 0.
+Optimize your final export by removing unused verts: Menu -> select -> single edges, if not, your TMD will be alot bigger then it needs to be.
+
+For OBJ exports via the batch export, the Specular value is used to specify the normal map intesnsity.
+
+Note: Textured and RGB coloured faces, can not be lit by using face normals (see the TMD fileformat spec) and conversion (via rsdlink) defaults to using lighting, ignoring the RGB colour.
+
+Using Textures:
+All material names must be unique!
+If not, it will only use the first one.
+
+
+
+
+The Net Yaroze program (RSDView) used to view the model is configured in NTSC 640*240 mode.
+MarbleClay uses a unified square for texture UV mapping, but your images can still be a rectangle, ie a VRAM TPage.
+I suggest changing the default size (option->configuration.. -> texture/template) of your texture width and height, optionally with twice the resolution and keeping the ratio correct.
+Note: Hit Enter after changing the object or material name for MarbleClay to update it.
+
+Texture (image) Material must have:
+
+~256x256x8
+Version 3+ Note: Only required once per image, using the image in other materials (selected from DiffuseMap -> Select image) will use the same TIM.
+
+In the material name, where:
+256x256 are width and height
+x8 is the bit width, can only be 4,8,16 (no 24bit support)
+
+Note, image size and bit size numbers start from 1, not zero.
+This will auto place each image after each other in VRAM.
+
+You can specify the VRAM XY for both image and CLUT by appending:
+~256x256x8~640x0x0x480
+This will put the image data at 640x0 and CLUT data at 0x480.
+Note, the VRAM numbers start from zero.
+
+If a G is put after ~
+Version 4+: now not case sensitive, G or g will work.
+
+~G256x256x8~640x0x0x480
+It will convert the image to grey scale, there is no extra image compression, but grey looks better with a limited palette range, ie 16 colour palette. This is especially useful when applying an RGB value to the texture, some times called tinting.
+The texture can then be reused, ie green grass, blue ocean, white snow, and can be thought of as something similar to a primative normal map.
+
+The max textures size allowed are:
+pixels width: 128px(@16bit) 256px(@8bit) 512px(@4bit) (which are all equal to 128 pixels of 16bit width or 2 Tpages in VRAM)
+pixel height: 256px
+
+Optimal your textured faces to fit into 2kb cache, for example:
+16bit = 32px * 32px Maximum
+8bit = 64px * 32px  Maximum
+4bit = 64px * 64px Maximum
+
+Anything bigger and it'll start slowing down the rendering.
+If you use a lot of textures, optimize your colour palette, lower the bit width to lower your pixel data.
+This does not really apply to 2D because it's rendering very small amounts of faces, compared to a 3D scene.
+
+The created TIM images aren't meant to be final, although they can be. You are meant to arrange the TIM's in VRAM, configured to  your game, the generated .PSX file will load the TIM and CLUT in TIMTOOL.
+
+
+RSD colour correction (Version 4):
+
+Adjust the RGB colour values for RSD export.
+Because textured faces with RGB colour (tint) doesn't support light calculations in NY's TMD format (possibly hardware?), this parameter lets you reduce the face RGB value.
+If you are mixing lit faces with non lit faces, the non lit faces will have the colour applied without any correction and it will look a lot brighter, like a glow or bright light effect, this is how it was done back then.
+But if want to use RGB with a texture in a scene with most lit faces, and you dont want your faces to look like they are glowing, then this is the main purpose of this parameter.
+Depending on the scene, a value of 10%-30% (reducing the RGB values by 90%-70%) will make the scene look better.
+This feature is implemented using the Refraction property in MarbleClay's material option.
+Add the Refraction properties to a material ( next to material name and select all box [/\], click the > icon [], extend the window down and tick the Refraction box).
+
+TIP: 
+If you're scene uses lighting, it's recommended to make all faces lit (unless it's glowing etc). 
+A similar RGB on a texture effect can be done while still making the face textured and lit.
+Using the exact same image but changing the pixel table colours (CLUT values), you create each material in MarbleClay specifying the full TIM information, including the CLUT position for your images. The idea is that the image VRAM location is the same (the image data in VRAM is overwritten to the same location in the RSD viewer), but the CLUT locations are different. In your game, you then could do the same if the images are small, a few kb each.
+If your images are bigger, it will consume a lot of RAM to store, unless it's reused after loading into VRAM (it still will make the psx.exe larger). 
+Alternatively, you could extract the extra CLUT's from the images and load them to the correct VRAM location manually, or programmatically recreate the extra CLUT's by inserting pixels into VRAM at the correct location. This way you only use a single TIM image.
+
+
+Transparency (RSD only): Uses RGB sliders for RSD transparency values.
+For OBJ exporter, I couldn't get it working on assimp viewer with alph on .png files using Tr & illum values  https://developer.apple.com/forums/thread/81950
+For untextured faces, just including the Transparency slider will make the face transparent.
+
+"The packets for non-textured polys don't allow you to set the transparency rate. The
+easy way around this is to make all your polys textured, but referencing a pure white square (can be
+any size, say, 4x4 pixels) as a texture. This increases drawing time slightly though, since textured
+polys take slightly longer than non-textured." Source Newsgroups: Transparency with TMDs Fri, 14 Aug 1998
+
+As from the file format manual, RSD:
+RGB
+000 -> 50% back + 50% polygon (default)
+100 -> 100% back + 100% polygon (not sure)
+010 -> 100% back - 100% polygon (like glass or water?)
+001 -> 100% back + 25% polygon (not sure)
+
+
+
+
+
+Exporting:
+
+Export filename must be less then 7 characters.
+The conversion programs only support DOS formatted filenames (8.3), so unfortunately the exporter also requires the same. One character is used for the number of TIM.
+Note, the default name comes from the Object panel's model name (default is NewObject), and the exporter only exports the selected object.
+
+NOTE: For each RSD export, ALL the textures in the file will be exported. It was originally designed so that a file is a single 3D model.
+
+
+Viewing:
+
+Once the RSD files have been created successfully, the rsdn.bat from the plugin folder is run, this batch file packages your model with the net yaroze rdsview program, converted and NO$PSX is run.
+If you are familiar with DOS batch files you can make it do whatever you like, ie adding a mode to a scene with rsdform and rsdcat tools  or delete the content and it will not do anything after creating the rsd files.
+
+
+I assume there are lights pointing down from above and also the camera point, towards the model.
+This can make seeing shade hard, it's better to look at the sides and the bottom of the model to see the light shading. 
+
+
+You need to know how your NO$PSX inputs are configured.
+
+
+* Rotation is around the model's local coordinate system.
+Triangle/Cross - X Rotation* 
+Square/Circle - Y Rotation*
+
+
+Up/Down -  Move Up/Down
+Left/Right - Move Left/Right
+L1/L2 - Zoom In/Out
+R1/R2 - Z Rotation*
+
+
+
+For MarbleClay help see:
+
+https://united3dartists.com/forum/viewtopic.php?f=4&t=6424
+
+

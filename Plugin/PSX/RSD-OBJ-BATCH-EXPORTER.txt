@@ -1,0 +1,19 @@
+Aug 2023 v4
+More translations and fixes.
+Added tmdanim (creates animation from static TMD (PlayStation 3D file format), see extras.
+
+
+May 2023 v3
+Plugin, scripts and translations (UI, Help & Tutorial) for MarbleClay: http://escargot.la.coocan.jp/MCLFrm.html
+Download the latest version and extract to C:\MarbleClay
+
+Extract the content of the zip file over the existing files.
+Read the included .txt files for more information.
+The script files are there mostly as examples and the qtest.lua (quad coplanar test) is useful.
+The Sample folder contains older sample files.
+The source code is very hacky mess and not great!
+
+
+If you find MarbleClay useful, email the developer for your registration code to unlock full model saving, see the app help for more information.
+For help, feedback, or bug report , post were you got this from or ask here: https://united3dartists.com/forum/viewtopic.php?f=4&t=6424&sid=1449d0231d3890ca914cf47c0ff88add
+

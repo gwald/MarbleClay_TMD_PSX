@@ -1,0 +1,382 @@
+
+runbatch.script for MarbleClay PlayStation/OBJ exports. Version: July 2024
+
+runbatchscript is plugin for MarbleClay 3D modeller which runs a script file by clicking the NY button on the toolbar.
+The script extends the exporting features (PlayStation RSD and generic OBJ) by running command line commands which you can do anything you like with.
+
+July 2024
+added !cp, !rm, !msg etc which uses cp.exe, rm.exe, msg.exe etc from the PSX folder.
+remove DOS pause commands from being executed.
+
+
+RSD Export/Obj batch script version 2 (updated doc May 2024)
+No warranty or liability, very hacky stuff! Use at own risk.
+
+######## Set up
+The NY (Orange N, light blue Y) is located on the Image bar, next to the pencil.
+You can toggle the Image bar visibility from the Window menu -> Show Toolbars -> Image.
+
+
+######## Using
+
+To use it, your model should have a Root Object in the Object tree called !runbatch C:/PATH/MYPROJECT.script.
+1)Create a new empty object (click the Object tab in the tree panel and on the bottom, click the "create empty Obj" button, it looks like a cup with a plus sign).
+2)Change its name to !runbatch and a fully qualified path to your script file, hit enter key to save the change, ie:
+!runbatch C:\Documents and Settings\NetYaroze\Desktop\test\test.script 
+
+NOTES: 
+Remember to hit the enter key to update the Object name in Marbleclay's Object tree viewer!
+Leave the sub mesh object under the !runbatch path\file.script - Marbleclay will remove empty root objects.
+
+
+You can have multiple scripts in a 3D model if you rename them, with a single one at a time called !runbatch ie:
+!runbatch  C:\MarbleCLAY\Plugin\PSX\test\test03.script
+!1runbatch C:\MarbleCLAY\Plugin\PSX\test\test02.script
+runbatch C:\MarbleCLAY\Plugin\PSX\test\test01.script
+
+
+Load the marbleclay script example:
+C:\marbleclay\Sample\wood-script.mcl 
+Next, click the NY button.
+See the example script:
+C:\marbleclay\Sample\wood.script for examples.
+
+Also see the default script C:\marbleclay\PSX\RunBatch.script which is used on the root object with the marbleclay default NewObject name.
+
+Note:
+No defaulting of values on commands, all parameter values must appear!
+Special script commands start with an exclamation (!), everything else will be passed to the command line using the current path (see !assetpath).
+Starting a line with # will comment the line out and skip it.
+
+
+
+######## !echo 
+
+
+!echo off / on
+Default is on, each DOS command and the output will be displayed in message pop ups.
+!echo off
+No message pop ups and run silently in the background. Marbleclay display will not change when running the script, so it's recommended to use:
+!msg starting...
+To show it's started to avoid confusion.  
+
+Your commands output can be logged by using >>file.log,  >NUL  2>NUL to null or the command output will be displayed if !echo on.
+
+
+####### !quit or !exit
+
+Stops and quits execution.
+Nothing below it will be processed.
+
+
+####### !assetpath
+The DOS CD command to change directory wont work because commands are executed individually internally.
+The script starts in the folder where the running script file is located in.
+You can CD into a folder by using:
+
+!assetpath export
+
+Spaces are fine in paths, but don't put in quotes or the trailing back slash, ie:
+!assetpath C:\Documents and Settings\NetYaroze
+
+Path can be change anytime, and the subsequent commands will process in that folder.
+You can also go back up the path tree from the current folder by use the .. path, ie:
+!assetpath  ..
+
+
+If the ending folder does not exist, it will try to create it and it will then be used as the current path.
+IE: !assetpath C:\temp\test will fail if C:\temp doesn't exist, instead using the !assetpath for each path will always work, ie:
+!assetpath  C:\temp
+!assetpath  C:\temp\test 
+
+
+####### !rsdexport
+
+!rsdexport RootObjectName out.rsd 1.0 1
+where:
+RootObjectName - is the Root Object name in the currently opened MarbleClay 3D file.
+out.rsd - is the exported RSD filename. Must be Alphanumeric, no spaces etc, no path included, filename must be 7.3 formatted or less (the scripts appends a digit for each image).
+1.0 - is the scale applied to the values from MarbleClay.
+1 - is either 0, 1 or 2 which means:
+		0, only do the export 
+		1, do the export and view it in No$PSX
+		2, ask if you want to view it (disregard the text, it's the wrong message)
+
+See RSDExporter.readme for more information.
+
+Please note: While the exporter does export all images used in the model, only a single image (TIM file) can be used in the RSDN viewer!
+This isn't so much of a limitation, because a single image can be a TPAGE size (256x256 in pixels), it just forces you to have all your images in a single image, rather than individually which is what normally expected.
+
+If you are a programmer and wish to contribute to extend this functionality (support multiple TIM's, passing screen, camera, light settings ect), the packdata program which combines model and image, is roughly this: "C:\MarbleCLAY\Plugin\PSX\packdatahack.c" and the original Net Yaroze RSDV program ("C:\MarbleCLAY\Plugin\PSX\RSDVIEW") source wasn't released but it wouldn't be too hard to create a new one using the many sample code from: https://github.com/gwald/netyaroze_demo
+
+
+
+####### !objexport
+
+!objexport RootObjectName out.obj 1.0 
+
+where:
+RootObjectName - is the Root Object name in the currently opened MarbleClay 3D file.
+out.obj - is the exported OBJ filename. Must be Alphanumeric, no spaces, no path included, filename can be any length.
+1.0 - is the scale applied to the values from MarbleClay.
+Note: If your model is modelled using real life measurements it will need to be scaled up. PSX uses fixed point math. 
+
+
+See also RSDExporter.readme for more information.
+
+####### !nopsx
+https://problemkaputt.de/psx.htm
+No$PSX is a small and functional PlayStation emulator, the tiny version is used, eg:
+
+!nopsx psx.exe
+The emulator will start and run the psx.exe program from the current folder. Alternatively you can also specify the full path.
+The filename extension MUST end in .exe
+
+
+####### !yarexe
+YAREXE creates a PlayStation PSX.EXE from a Net Yaroze Siocons' batch/auto script.
+
+Syntax: yarexe scriptfile [-v]
+Where:
+scriptfile is the siocons AUTO or CW's .sio, .dat batch files
+-v or /v is for verbose output and leaves PS-X exe from CodeWarrior .pxe file.
+
+Output files is psx.exe file, a exefixup combined file which is ready to run!
+If it didn't create it, something went wrong in combine or eco2exe, etc.
+auto file (Net Yaroze script) must have the last line as:  go
+File combEco.exe is a temporary file which is the siocons script combined file and ecoff to exe applied.
+
+
+
+####### !psxexe2iso
+A batch file which creates a PSX bootable CUE/BIN files from a single PSX.EXE file.
+The batch file is located at: C:\MarbleCLAY\Plugin\PSX\psxexe2iso\psxexe2iso.bat
+
+Example:
+!psxexe2iso psx SCEI
+
+Where:
+ psx is the filename (without extenstion) of your PlayStation PSX.EXE program that will boot and run.
+ SCEI, is the region the image will be formated in. It can either be one of the 3 regions: SCEE, SCEA or SCEA
+
+It will create PSX-SCEI.cue and PSX-SCEI.bin in the current folder it was called from.
+
+
+####### !assimp
+Used with the !objexport command.
+Assimp is a command line that converts 3D formats, ie the command below will convert the .obj file into a collada .dae format file.
+!assimp export test.obj test.dae
+
+####### !assimp_viewer
+Used with the !objexport command.
+assimp_viewer is a 3D model viewer which supports many 3D formats.
+Assimp_viewer requires the DirectX 9.0c redistributable installed from:
+https://www.microsoft.com/en-us/download/details.aspx?id=8109 (95.6 MB)
+
+
+####### !convert
+Converts image formats and manipulates them, like resizing, flipping etc, eg
+!convert in.bmp  -verbose   -auto-level -resize 256!x128! -type palette   -colors 256  out.bmp
+
+See convert.txt for usage.
+
+
+####### !img2tim
+Used with the !rsdexport command.
+Coverts jpg, png and bmp etc into the PSX image format .tim file, ie
+!img2tim -bpp 8  -tcol 0 0 0 -org 640 128 -plt 640 0  -o PSX.tim   out.bmp 
+ 
+See img2tim.txt for parameters and how to use it.
+
+
+####   !wincmd
+Launches a new window command line and runs a command line, eg
+!wincmd "dir /p & pause & exit"
+
+####   !msg 
+Halts the script and out puts a message, eg:
+!msg This is a message. ^^This is a new line.
+
+This will pop up:
+This is a message.
+This is a new line.
+
+
+It will wait until you click the OK button.
+It will look like a marbleclay taskbar window and can often be in the background.
+
+####    !popup 
+Same as !msg but this is an external popup (using msg.exe) but it doesn't support a new line character.
+This doesn't have the problem of losing the popup behind marbleclay.
+
+
+
+########  Tips
+
+Use !echo on to see individual commands and output when editing this script to confirm actions, one by one are correct.
+
+You can not save your script while MarbleClay is running the script! Wait for it to end first.
+
+WARNING - strongly advise not deleting anything via this script without fully testing it carefully first!
+WARNING - WARNING!!! be very very! careful with "!rm -rf *" - if you dont know what it doesn't dont use it!
+
+
+#### froozen or locked up
+
+Sometimes the message boxes or launched apps (like no$psx) will be launched behind the MarbleClay.
+You can not use MarbleClay while it's executing your script, so it will look like it's locked up or crashed, it hasn't just hit Alt + Tab to find it, Also you'll see two MarbleClay windows in the toolbar.
+
+If your script runs a command and it's halted or pause (ie awaiting input), it will need to be killed via process explorer (typically a cmd.exe process), for the script to continue and finish, returning back to MarbleClay.
+O run C:\MarbleCLAY\Plugin\PSX\kill.bat to kill common used commands - WARNING this will kill ALL instances running.
+
+
+Do not use the pause DOS command! You will have to kill the script as mentioned above.
+Instead of pause, you can call !msg for a popup with your message, ie:
+!msg "pause"
+
+Or use something like this, to run a new command line command and then pause and return to the script as normal:
+START CMD /C "ECHO My Popup Message && dir && PAUSE"
+Alternatively, if you require something more complex, you would call your own batch file after the files have been exported.
+
+
+
+#### Unix/Linux utility commands
+Executables are from: https://gnuwin32.sourceforge.net/packages/coreutils.htm
+
+####   !pwd - Unix/Linux  
+Print the full filename of the current working directory.
+There are no options.
+
+Examples:
+
+!pwd >> new.log
+Will add the current folder to the new.log file.
+
+!echo on
+!pwd
+!echo off
+
+Turns on the echo feature to display the result of pwd, then it's turned off.
+
+
+
+####   !cat - Unix/Linux cat - A better alternative to windows' type command. 
+cat --help
+Usage: cat [OPTION] [FILE]...
+Concatenate FILE(s), or standard input, to standard output.
+
+  -A, --show-all           equivalent to -vET
+  -b, --number-nonblank    number nonblank output lines
+  -e                       equivalent to -vE
+  -E, --show-ends          display $ at end of each line
+  -n, --number             number all output lines
+  -s, --squeeze-blank      never more than one single blank line
+  -t                       equivalent to -vT
+  -T, --show-tabs          display TAB characters as ^I
+  -u                       (ignored)
+  -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB
+      --help     display this help and exit
+      --version  output version information and exit
+
+With no FILE, or when FILE is -, read standard input.
+
+  -B, --binary             use binary writes to the console device.
+
+
+
+####   !cp - Unix/Linux cp - A better alternative to windows' copy command. 
+cp --help
+Usage: !cp [OPTION]... [-T] SOURCE DEST
+  or:  !cp [OPTION]... SOURCE... DIRECTORY
+  or:  !cp [OPTION]... -t DIRECTORY SOURCE...
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --archive                same as -dpR
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+      --copy-contents          copy contents of special files when recursive
+  -d                           same as --no-dereference --preserve=link
+      --no-dereference         never follow symbolic links
+  -f, --force                  if an existing destination file cannot be
+                                 opened, remove it and try again
+  -i, --interactive            prompt before overwrite
+  -H                           follow command-line symbolic links
+  -l, --link                   link files instead of copying
+  -L, --dereference            always follow symbolic links
+  -p                           same as --preserve=mode,ownership,timestamps
+      --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                                 mode,ownership,timestamps), if possible
+                                 additional attributes: links, all
+      --no-preserve=ATTR_LIST  don't preserve the specified attributes
+      --parents                append source path to DIRECTORY
+  -P                           same as `--no-dereference'
+  -R, -r, --recursive          copy directories recursively
+      --remove-destination     remove each existing destination file before
+                                 attempting to open it (contrast with --force)
+      --reply={yes,no,query}   specify how to handle the prompt about an
+                                 existing destination file
+      --sparse=WHEN            control creation of sparse files
+      --strip-trailing-slashes remove any trailing slashes from each SOURCE
+                                 argument
+  -s, --symbolic-link          make symbolic links instead of copying
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 copy only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -x, --one-file-system        stay on this file system
+      --help     display this help and exit
+      --version  output version information and exit
+
+By default, sparse SOURCE files are detected by a crude heuristic and the
+corresponding DEST file is made sparse as well.  That is the behavior
+selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST
+file whenever the SOURCE file contains a long enough sequence of zero bytes.
+Use --sparse=never to inhibit creation of sparse files.
+
+The backup suffix is `~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+As a special case, cp makes a backup of SOURCE when the force and backup
+options are given and SOURCE and DEST are the same name for an existing,
+regular file.
+
+
+####   !rm - Unix/Linux rm - A better alternative to windows' del command. 
+rm --help
+Usage: !rm [OPTION]... FILE...
+Remove (unlink) the FILE(s).
+
+  -d, --directory       unlink FILE, even if it is a non-empty directory
+                          (super-user only; this works only if your system
+                           supports `unlink' for nonempty directories)
+  -f, --force           ignore nonexistent files, never prompt
+  -i, --interactive     prompt before any removal
+      --no-preserve-root do not treat `/' specially (the default)
+      --preserve-root   fail to operate recursively on `/'
+  -r, -R, --recursive   remove the contents of directories recursively
+  -v, --verbose         explain what is being done
+      --help     display this help and exit
+      --version  output version information and exit
+
+To remove a file whose name starts with a `-', for example `-foo',
+use one of these commands:
+  rm -- -foo
+
+  rm ./-foo
+
+Note that if you use rm to remove a file, it is usually possible to recover
+the contents of that file.  If you want more assurance that the contents are
+truly unrecoverable, consider using shred.
+
+
+WARNING - WARNING!!! be very very! careful with !rm -rf * - if you dont know what it doesn't dont use it!

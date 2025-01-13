@@ -1,0 +1,20 @@
+#This is the default script if !runbatch C:\PATH\FILENAME.script isn't specified as a Root Object in the marbleclay 3D model
+
+#turn logging off  
+!echo off
+#!msg Using default script C:\MarbleCLAY\Plugin\PSX\RunBatch.script witch requires a 3D object called: NewObject
+
+!assetpath C:\MarbleCLAY
+!assetpath temp
+!assetpath NewObject
+
+#Better to remove everything in that folder than deleting the NewObject directory (locking issues if you have it open)
+!rm -rf *
+
+#export can convert to TMD only - no viewing yet
+!rsdexport NewObject new.rsd 20.0  1
+
+#uncomment to create cue/bin file 
+#!psxexe2iso psx SCEI > psxexe2iso.log
+
+#!msg "Finished, files saved to C:\MarbleCLAY\TEMP\NewObject"  

@@ -1,0 +1,177 @@
+@echo off
+set RSDNBAT=RSDN.BAT psxexe2iso VERSION 9
+
+REM - RSDLINK2.EXE Version - This works without DOSBOX or ntvdmx64.bat, thanks to RSDLINK2.EXE
+REM - RSDLINK2 has great features for programmers, exporting Faces, Verts, and Normals in seperate files, and seperating groups (Marbleclay PSX exporter doesn't support groups.) Read RSDLINK2.README
+REM - Scale, tmdsort and tmdinfo are not supported features, marbleclay does scale via the RSD export so it shouldn't be an issue.
+
+REM  RSDN.bat copy of rsdv.bat 
+REM  Prestartnopsx RSD file (3D object data) in No$PSX
+REM  Put this file where rsdv.bat is, ie c:\psx\psx\bin
+REM V9 Added psxexe2iso and fixed cp and rm commands (from: https://gnuwin32.sourceforge.net/packages/coreutils.htm)
+REM v8 THIS is RSDLINK2.EXE
+REM v6 use no$psx Tiny, the full program has issue exiting and hangs - download, put program in path and rename to nopsxtiny.exe.
+REM v5 MarbleClay batch script version- added 3rd param startnopsx
+REM v4 MarbleClay export version
+REM v3 added scale
+REM v2 added NY home env var check
+REM v1 working
+
+REM RETURN ERRORS:
+REM ERROR 10001: RSD file not found - Check your command or folder
+REM ERROR 10002: RSDLINK failed - Could not convert RSD to TMD
+REM ERROR 10003: TMDSORT failed -  Bad TMD? Check FILE.LOG
+REM ERROR 10004: PACDATA failed -  BAD TMD? Check FILE.LOG
+REM ERROR 10005:  FILE.SIO failed to be created - is the file locked?
+REM ERROR 10006:  Yarexe failed to create psx.exe - check FILE.LOG
+
+
+echo Note: MarbleClay does the scaling in the RSD, this scale value is used if used with your own models  > %1.LOG
+echo scale = %scale%   >> %1.LOG
+
+
+
+REM use NY var if set or default to NY installation 
+REM if "%HOME%"=="" (set PSXBIN=C:\MarbleCLAY\Plugin\PSX) else (set PSXBIN=%HOME%\bin)
+set PSXBIN=C:\MarbleCLAY\Plugin\PSX
+
+set RSDLINK=%PSXBIN%\rsdlink2.exe
+set PACKDATA=%PSXBIN%\packdatahack.exe
+set YAREXE=%PSXBIN%\yarexe.exe
+REM set DLOAD=%PSXBIN%\dload.exe
+REM set LOAD=%PSXBIN%\load.exe
+REM set WAIT=%PSXBIN%\wait.bat
+REM set GO=%PSXBIN%\go
+REM set SIOCONS=%PSXBIN%\siocons
+set RSDVIEW=%PSXBIN%\rsdview
+set scale=1.0
+set startnopsx=1
+
+if exist %1.TMD   del /F  %1.TMD
+if exist %1U.TMD  del /F  %1U.TMD
+if exist %1.PCK   del /F  %1.PCK
+if exist %1.SIO   del /F  %1.SIO
+if exist %1.EXE   del /F  %1.EXE
+if exist %1.LOG   del /F  %1.LOG
+if exist PSX.EXE  del /F  PSX.EXE
+
+REM set cmd line params
+IF NOT "%~2"=="", set scale=%~2
+IF NOT "%~3"=="", set startnopsx=%~3
+
+if exist %1.rsd goto RSDLINK
+echo Error %*
+echo rsdn.bat is a copy of rsdv.bat but lauches No$PSX instead of siocons.
+echo Usage: rsdn yourRSDfile [scale] [launchNo$PSX]
+echo Where 
+echo       yourRSDfile is the rsd file without .rsd
+echo       scale is a float value, default is 1.0. 
+echo       launchNo$PSX is either 1 or 0, default is 1 to lauch emulator, 0 does not.
+%PSXBIN%\msg.exe *  /w "ERROR 10001: RSD file not found - Check your command or folder"  
+EXIT /B 10001
+
+:RSDLINK
+echo Starting %*
+echo starting RSDN.BAT %* >> %1.LOG 
+pwd  >> %1.LOG
+
+echo %RSDNBAT%  >> %1.LOG
+echo Converting RSD to TMD. 
+echo Converting RSD to TMD. >> %1.LOG
+echo .
+
+
+REM more complicated command can go here, see rsdform(moving) and rsdcat (joining)
+echo %RSDLINK% -v -s %scale% -o %1U.TMD %1.rsd >> %1.LOG
+echo OLD %RSDLINK% -v -s %scale% -o %1U.TMD %1.rsd >> %1.LOG
+
+echo deleting out faces verts and normals  >> %1.LOG
+
+REM rm *.overtsNorms  -n %1.oVertsNorms
+
+echo %RSDLINK% -p %1.oFaces -v %1.oVerts -o %1.TMD %1.rsd >> %1.LOG
+
+%RSDLINK% -p %1.oFaces -v %1.oVerts -n %1.oVertsNorms -o %1.TMD %1.rsd >> %1.LOG
+
+echo .  >> %1.LOG
+
+if exist %1.TMD goto PACKDATA
+echo RSDLINK failed; abort!
+echo RSDLINK failed; abort! >> %1.LOG
+%PSXBIN%\msg.exe *  /w "ERROR 10002: RSDLINK failed - Could not convert RSD to TMD"  
+EXIT /B 10002
+
+
+:PACKDATA
+echo Packing TMD and TIM to create PCK ...
+echo Packing TMD and TIM to create PCK >> %1.LOG
+%PACKDATA% >> %1.LOG
+echo %PACKDATA% %1 %1.TMD
+%PACKDATA% %1 >> %1.LOG
+echo .  >> %1.LOG
+
+if exist %1.PCK goto DLOAD
+echo PACDATA failed; abort!
+echo PACDATA failed; abort! >> %1.LOG
+%PSXBIN%\msg.exe *  /w "ERROR 10004: PAKDATA failed -  BAD TMD? Check %1.LOG"  
+EXIT /B 10004
+
+:DLOAD
+echo Creating yaroze siocons batch %1.SIO
+echo Creating yaroze siocons batch %1.SIO >> %1.LOG
+echo dload -n%1.PCK -a 80090000 >> %1.LOG
+echo local dload  %1.PCK 0x80090000 > %1.SIO
+echo local load  %RSDVIEW% >> %1.SIO
+echo go >> %1.SIO
+
+if exist %1.SIO  goto LOAD
+echo %1.SIO failed to be created; abort!
+echo %1.SIO failed to be created; abort! >> %1.LOG
+%PSXBIN%\msg.exe *  /w "ERROR 10005:  %1.SIO failed to be created - is the file locked?"  
+EXIT /B 10005
+
+:LOAD
+echo ---- %1.SIO ---- >> %1.LOG
+type %1.SIO >> %1.LOG
+echo ---- %1.SIO ---- >> %1.LOG
+type %1.SIO
+echo .  >> %1.LOG
+
+echo creating psx.exe...
+echo creating psx.exe. >> %1.LOG
+echo yarexe %1.SIO >> %1.LOG
+%YAREXE% %1.SIO  >> %1.LOG
+echo .  >> %12.LOG
+
+
+if exist PSX.EXE  goto GO
+echo LOAD failed; abort!
+echo LOAD failed; abort! >> %12.LOG
+%PSXBIN%\msg.exe *  /w "ERROR 10006:  Yarexe failed to create psx.exe - check %12.LOG"  
+EXIT /B 10006
+
+
+:GO
+REM TO UNCOMMENT OBJECT DETAILS
+REM %RSDLINK% -info %1.rsd  >> %1.LOG
+
+copy  /Y psx.exe %1.EXE >>  %12.LOG
+copy /Y psx.exe %1.EXE
+
+
+REM  if param 3 is 0, skip nopsx
+IF %startnopsx%==0,GOTO END
+echo %PSXBIN%\no$psxtiny.exe  %1.exe
+echo %PSXBIN%\no$psxtiny.exe  %1.exe >> %12.LOG
+
+%PSXBIN%\no$psxtiny.exe %1.exe 
+GOTO END
+
+:END
+
+REM psxexe2iso is run here because it will create the CUE/BIN if playing or not playing the emulator
+REM It's also a PITA to batch because it requires a wait statement to use the CDROM!
+REM %PSXBIN%\psxexe2iso\psxexe2iso.bat %1 SCEI >>  %12.LOG
+REM Moved to marbleclay script, !psxexe2iso NAME SCEI >> psxexe2iso.log
+
+EXIT /B 0
