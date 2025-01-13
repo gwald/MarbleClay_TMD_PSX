@@ -2,14 +2,6 @@
 Plugin and tools to create PlayStation TMD 3D models for MarbleClay 3D modeller
 https://github.com/gwald/MarbleClay_TMD_PSX
 
-# Included external tools
-1. PlayStation emulator for viewing 3D models: https://problemkaputt.de/psx.htm
-2. ImageMagick (convert) for 2D image convertion/correction: https://github.com/ImageMagick/ImageMagick
-3. Img2tim for TIM format convertion: https://github.com/lameguy64/img2tim
-4. Assimp for convertion and displaying 3D models: https://github.com/assimp/assimp
-5. DOSBOX for RSDLINK: https://www.dosbox.com/
-6. Mkpsxiso for creating PSX ISO: https://github.com/Lameguy64/mkpsxiso
-7. Yarexe for creating PlayStation executable: https://github.com/gwald/Yarexe
 
 
 # Features
@@ -19,8 +11,8 @@ https://github.com/gwald/MarbleClay_TMD_PSX
 4. View 3D asset via PlayStation emulator or Assimp
 
 # Documentation
-["C:\MarbleCLAY\Plugin\PSX\RSDExporter.readme"](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/RSDExporter.readme)
-["C:\MarbleCLAY\Plugin\PSX\runbatchscript.readme"](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/runbatchscript.readme)
+1. RSD Exporter Plugin: C:\MarbleCLAY\Plugin\PSX\RSDExporter.readme  https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/RSDExporter.readme
+2. RunBatchScript Plugin: C:\MarbleCLAY\Plugin\PSX\runbatchscript.readme https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/runbatchscript.readme
 
 # Install
 
@@ -59,3 +51,13 @@ To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-ntvdmx64.bat"
 If you don't want to install ntvdmx64 and still want to run the original RSDLINK tool, it can be run in a DOSBOX script, however it's about 20x times slower!!.
 To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-DOSBOX.BAT"
 
+
+# Included external tools
+1. PlayStation emulator for viewing 3D models: https://problemkaputt.de/psx.htm
+2. ImageMagick (convert) for 2D image convertion/correction: https://github.com/ImageMagick/ImageMagick
+3. Img2tim for TIM format convertion: https://github.com/lameguy64/img2tim
+4. Assimp for convertion and displaying 3D models: https://github.com/assimp/assimp
+5. DOSBOX for RSDLINK: https://www.dosbox.com/
+6. Mkpsxiso for creating PSX ISO: https://github.com/Lameguy64/mkpsxiso
+7. Unix/Linux utility commands executables are from: https://gnuwin32.sourceforge.net/packages/coreutils.htm
+8. Yarexe for creating PlayStation executable: https://github.com/gwald/Yarexe
