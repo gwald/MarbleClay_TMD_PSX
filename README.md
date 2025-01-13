@@ -5,7 +5,7 @@ https://github.com/gwald/MarbleClay_TMD_PSX
 
 
 # Features
-1. Better and verbose translation from the original Japanese translation.
+1. Better and verbose translation from the original Japanese documentation.
 2. Plugin for exporting RSD file format.
 3. Plugin for running a script from the NY button.
 4. View 3D asset via PlayStation emulator or Assimp
@@ -65,4 +65,9 @@ To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-DOSBOX.BAT"
 7. Unix/Linux utility commands executables are from: https://gnuwin32.sourceforge.net/packages/coreutils.htm
 8. Yarexe for creating PlayStation executable: https://github.com/gwald/Yarexe
 
+# MarbleClay videos:
+MarbleClay is a small 3D modeller (and position renderer) with modern tools and UI.
+https://www.youtube.com/watch?v=EG2vP54UWsc&list=PL7PuatOJN9g3UuLApfipLB09zn8p5NzqR
+
+# Old stuff
 Old files were originally posted here: https://united3dartists.com/forum/viewtopic.php?t=6424
