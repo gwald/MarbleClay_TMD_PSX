@@ -3,12 +3,12 @@ Plugin and tools to create PlayStation TMD 3D models for MarbleClay 3D modeller.
 Tested working in Windows 10 x64 (Windows 32bit XP should work but untested).
 
 # About MarbleClay:
-[MarbleClay](http://escargot.la.coocan.jp/MCLFrm.html) is a small 3D modeller (and pose renderer) with modern tools and UI. \
+[MarbleClay](http://escargot.la.coocan.jp/MCLFrm.html) is a free, small and simple 3D modeller (and pose renderer) with modern tools and UI. \
 **PLEASE NOTE: MarbleClay doesn't not support per vertex color so no Gouraud shading is possible!** \
-Some MarbleClay videos: https://www.youtube.com/watch?v=EG2vP54UWsc&list=PL7PuatOJN9g3UuLApfipLB09zn8p5NzqR
+Some MarbleClay videos: https://www.youtube.com/watch?list=PL7PuatOJN9g3UuLApfipLB09zn8p5NzqR
 
 # MarbleClay_TMD_PSX Features
-1. Better and verbose translation from the original Japanese documentation.
+1. Better and verbose English translation from the original Japanese documentation.
 2. Plugin for exporting RSD file format.
 3. Plugin for running a script from the NY button.
 4. View 3D asset via PlayStation emulator or Assimp
