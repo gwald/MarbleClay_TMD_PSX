@@ -55,7 +55,7 @@ To use this, replace RSDN.bat with "C:\MarbleCLAY\Plugin\PSX\RSDN-DOSBOX.BAT"
 
 
 # Included source code
-1. [RSDVIEW.C](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/RSDVIEW.C) This is a replacement of the original Sony PSX RDS viewer which 3D clipped (Z fighting) a lot. You can also use it as a guide for displaying 3D models using [Sony's Net Yaroze SDK](http://netyaroze.com/Development/Toolchain).
+1. [RSDVIEW.C](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/RSDVIEW.C) This is a replacement of the original Sony PSX RDS viewer which 3D clipped (Z fighting) a lot. You can also use it as a guide for displaying 3D models using [Sony's Net Yaroze SDK](http://netyaroze.com/Development/Toolchain). It is part of [RSDN](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/RSDN.bat) (RSD-> TMD-> PSX.EXE-> [PSX.ISO->] NO$PSX ), if you install it correctly you can call this batch via CLI from anyway, ie: C:\MarbleCLAY\Plugin\PSX\RSDN.bat test (where test.rsd is in the current path).
 2. [PACKDATAHACK.C](https://github.com/gwald/MarbleClay_TMD_PSX/blob/main/Plugin/PSX/packdatahack.c) The original Sony packer program was 16bit, and is limited to a single texture.
 
 # Included external tools
