@@ -48,7 +48,7 @@
 
 
 #define VAL_ROT 64 //5 * ONE / 360;
-#define VAL_MOV 64
+#define VAL_MOV 32
 
 
 #define PCK_ADDR 0x80090000 // max model/tim size:  80140000−80090000 = 720k
@@ -167,13 +167,13 @@ obj_interactive()
 	if ((padd & PADL1) > 0)
 		PWorld.vy -= VAL_ROT;// 5 * ONE / 360;
 	/* Rotate Y */
-	if ((padd & PADL2) > 0)
+	if ((padd & PADR1) > 0)
 		PWorld.vy += VAL_ROT;//5 * ONE / 360;
 	/* Rotate X */
-	if ((padd & PADR1) > 0)
+	if ((padd & PADR2) > 0)
 		PWorld.vx += VAL_ROT;//5 * ONE / 360;
 	/* Rotate X */
-	if ((padd & PADR2) > 0)
+	if ((padd & PADL2) > 0)
 		PWorld.vx -= VAL_ROT;//5 * ONE / 360;
 
 
