@@ -192,7 +192,7 @@ obj_interactive()
 		DWorld.coord.t[0] -= VAL_MOV;
 
 
-#if 0
+#if 1
 	/* Transfer Z */
 	if ((padd & PADRup) > 0)
 		view.vpy -= VAL_MOV;
